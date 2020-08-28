@@ -1,0 +1,126 @@
+title: "Contractors"
+description: >-
+keywords: staffing
+vertical:
+community:
+coding_standards:
+url:
+email: service@esteemed.io
+slack_signup_link:
+bot_link:
+bio:
+experience:
+contractor_profiles_link:
+twitter:
+linkedin:
+facebook:
+logo:
+  white:
+  black:
+
+collections:
+  skills:
+    output: true
+    permalink: /:collection/:name
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-get-json
+  - jekyll-datapage-generator
+  - jekyll-menus
+  - jekyll-paginate-v2
+
+jekyll_get_json:
+  - data: profiles
+    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/profiles?channel=CUN3PEEAY'
+  - data: jobs
+    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/jobs'
+  - data: config
+    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/config'
+
+author_dir: "blog/author"
+author_title_prefix: "Blog - By "
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: "/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+autopages:
+  enabled: true
+  title: ':cat Posts'
+  categories:
+    layouts:
+      - 'categories.html'
+    permalink: "/blog/category/:cat/"
+  collections:
+    enabled: false
+  tags:
+    enabled: false
+
+page_gen-dirs: true
+page_gen:
+  - data: "profiles"
+    template: "contractor"
+    name: "id"
+    dir: "profile"
+  - data: "config.titles"
+    template: "contractors"
+    name: "key"
+    dir: "contractors"
+  - data: "config.skills"
+    template: "contractors"
+    name: "key"
+    dir: "skills"
+  - data: "jobs"
+    template: "job"
+    name: "key"
+    dir: "job"
+
+collections:
+  categories:
+    title: Categories
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/:title/
+  -
+    scope:
+      path: ''
+      type: authors
+    values:
+      permalink: "/blog/author/:title/"
+      layout: authors
+      image: /img/profile-pic.png
+      sitemap: false
+  -
+    scope:
+      path: ''
+      type: categories
+    values:
+      permalink: "/blog/category/:title/"
+      layout: categories
+      sitemap: false
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+exclude:
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - vendor

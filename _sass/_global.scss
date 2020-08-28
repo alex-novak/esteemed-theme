@@ -1,0 +1,121 @@
+/**
+ * @file
+ * Global theme styles
+ */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  right: 0;
+  min-width: 320px;
+  margin: 0;
+  padding: 56px 0 0;
+  font-family: "Lato",sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  overflow-x: hidden;
+  transition: right .5s;
+
+  @media only screen and (min-width: 62.063em) {
+      padding: 76px 0 0;
+  }
+  &.is-openMenu {
+      right: 300px;
+      overflow: hidden;
+      @media only screen and (min-width: 30.062em) {
+          right: 300px;
+      }
+  }
+  &.page-homepage {
+      padding-top: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+// Override hamburger menu size.
+i.fa.fa-bars {
+  font-size: 30px!important;
+}
+
+h4.pane-title {
+  font-family: "poppinsregular",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+
+  @media only screen and (max-width: 48.063em) {
+    font-size: 16px;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+/* Headlines */
+h1 {
+  margin: 0 0 10px;
+  font-family: $fontFamily-bold--second;
+  font-size: 24px;
+  letter-spacing: .025em;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    margin: 0 0 30px;
+    font-size: 42px;
+  }
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-family: $fontFamily-bold--second;
+  font-size: 22px;
+  letter-spacing: .025em;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    margin: 0 0 30px;
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-family: $fontFamily-bold--second;
+  font-size: 18px;
+  letter-spacing: .025em;
+  margin: 0 0 10px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+    margin: 0 0 10px;
+  }
+}
+
+strong {
+  font-family: $fontFamily-semibold;
+}
+
+span.ext {
+  background: url("/assets/img/extlink_s.png") 2px center no-repeat;
+  height: 10px;
+  padding-right: 12px;
+  text-decoration: none;
+  width: 10px;
+}

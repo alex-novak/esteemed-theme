@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+{% include head.html %}
+<body class="html{% if page.class %} {{ page.class }}{% endif %} no-sidebars i18n-en panel-layout-onecol panel-region-middle">
+  {% include header.html %}
+  <div id="main-wrapper"{% if dir == "profile" or dir == "job" %} class="container"{%- endif -%}>
+    <div id="main" class="main">
+      <div id="content" class="container jobs-wrapper">
+        <div class="jobs-wrapper-content">
+          <div class="columns-wrapper">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      {% include contact-form.html %}
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

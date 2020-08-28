@@ -1,0 +1,85 @@
+/**
+ * @file
+ * Form elements styles
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 7px 10px 8px;
+  width: 100%;
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+  appearance: none;
+  background-color: $newblue--lightest2;
+  border-radius: 0;
+  border: 2px solid $newblue--lightest2;
+  color: $white;
+  display: inline-block;
+  font-family: $fontFamily-semibold;
+  font-size: 14px;
+  line-height: 1;
+  outline: 0;
+  padding: 10px 15px 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  -webkit-appearance: none;
+
+  @include media-breakpoint-up(md) {
+    padding: 14px 15px 12px;
+  }
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+}
+
+.btn--blue {
+  background: $newblue--lightest2;
+  color: $white !important;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $newblue--lightest2 !important;
+  }
+}
+
+.btn--light {
+  background: transparent;
+  border-color: $blue--dark;
+  color: $white  !important;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    border-color: $white;
+    color: $newblue--lightest2 !important;
+  }
+}
+
+.btn--white {
+  background: transparent;
+  border-color: $blue--dark;
+  color: $newblue--lightest2 !important;
+  font-size: 14px;
+
+  &:hover,
+  &:focus {
+    background: $newblue--lightest2;
+    border-color: $newblue--lightest2;
+    color: $white !important;
+  }
+}

@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Contractors menu
+ *
+ * Located on the pages: contractors/*
+ */
+
+$bg-contractors-menu: $blue--darkest;
+$bg-active-link: $grey--lightest;
+
+.contractorsMenu {
+  position: relative;
+  background: $bg-contractors-menu;
+
+  &-btn {
+    position: relative;
+    width: 100%;
+    border: 0;
+    color: $white;
+    background: transparent;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 15px 0 15px 0;
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      display: inline-block !important;
+    }
+
+    &.is-open {
+      &:before {
+        transform: rotate(225deg) translateY(2px);
+        right: 4px;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: rotate(45deg) translateY(-15px);
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
+    }
+  }
+
+  ul.menu {
+    position: absolute;
+    display: none;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+    background: $grey--darkest;
+    left: 0;
+
+    @include media-breakpoint-up(sm) {
+      position: static;
+      background: transparent;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+      display: flex !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      background: $grey--darkest !important;
+      position: absolute;
+    }
+
+    li {
+      flex: 1 1 20%;
+      text-align: center;
+      margin: 0;
+
+      @include media-breakpoint-up(lg) {
+        flex: 1;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: $white;
+        font-family: $fontFamily-extrabold;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 10px 15px;
+        transition: all .3s;
+
+        &:hover,
+        &:focus,
+        &.active {
+          background: $bg-active-link;
+          color: $blue--darkest;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+/**
+ * @file
+ * Testimonials section
+ *
+ * Located on the pages: Home page,
+ */
+
+.sectionTestimonial {
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  @include media-breakpoint-up(sm) {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-up(md) {
+    padding: 75px 0;
+  }
+  &:hover {
+    .slick__arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.sliderTestimonial {
+  .slick--skin--boxed-carousel .slick-list {
+    margin: 0;
+  }
+  .slick-slide {
+    outline: 0;
+  }
+  .slide__content {
+    padding: 0;
+    margin: 0;
+  }
+  .slick__arrow {
+    display: none;
+    opacity: 0;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: -20px 0 0;
+    text-indent: -9999px;
+    outline: 0;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: 2px solid $blue;
+      border-right: 2px solid $blue;
+      border-radius: 2px;
+    }
+  }
+  .slick-prev {
+    left: 15px;
+    transform: rotate(135deg);
+  }
+  .slick-next {
+    right: 15px;
+    transform: rotate(-45deg);
+  }
+}
+
+.boxTestimonial {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    padding: 0 30px;
+  }
+  &-img {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      @include media-breakpoint-up(sm) {
+        width: inherit;
+        height: inherit;
+        max-width: none;
+      }
+    }
+  }
+  &-body {
+    @include media-breakpoint-up(sm) {
+      padding-left: 20px;
+    }
+    @include media-breakpoint-up(md) {
+      padding-left: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 30px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-left: 50px;
+    }
+    i {
+      font-size: 30px;
+      color: $blue--light;
+      @include media-breakpoint-up(sm) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 40px;
+      }
+    }
+    &-description {
+      font-family: $fontFamily-thin;
+      font-size: 20px;
+      @include media-breakpoint-up(sm) {
+        font-size: 22px;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 36px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 40px;
+      }
+    }
+    &-author {
+      padding-top: 10px;
+      text-align: right;
+      font-family: $fontFamily-extrabold;
+      font-size: 14px;
+      color: $blue;
+      @include media-breakpoint-up(md) {
+        font-size: 16px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 20px;
+      }
+      span {
+        display: block;
+      }
+    }
+    &-btn {
+      padding-top: 30px;
+      text-align: center;
+      @include media-breakpoint-up(sm) {
+        text-align: right;
+      }
+      a {
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  }
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+    }
+    
+    .item,
+    .active.left,
+    .active.right {
+      opacity: 0;
+    }
+
+    .active,
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+
+    .next,
+    .prev,
+    .active.left,
+    .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}

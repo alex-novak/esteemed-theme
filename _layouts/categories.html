@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{% assign posts = site.posts | where:'categories', page.slug %}
+<div class="container category-post-item">
+  <div class="align-top">
+    <h1 class="u-text-bold main-title text-center">{{ page.title }} Posts</h1>
+  </div>
+  <div class="row blog-all-posts">
+    {% for post in posts %}
+    {% assign author = site.data.authors[post.author] %}
+    <a href="{{ post.url }}" class="blog-card col-xs-6 col-md-4">
+      <div class="blog-card__wrapper">
+        {% if post.image %}
+          <div class="blog-card__wrapper--image" style="background-image: url('{{ post.image }}'); background-size: cover;">
+          </div>
+        {% else %}
+          <div class="blog-card__wrapper--image" style="background-image: url('/img/blog-performance.jpg'); background-size: cover;">
+          </div>
+        {% endif %}
+        <div class="blog-card__bottom">
+          <h2>{{ post.title }}</h2>
+          <div class="blog-card__bottom--author">{{ author.name }}</div>
+          <div class="blog-card__bottom--date-categories">
+            <span class="blog-card__bottom--date">{{ post.date | date: "%b %d, %Y" }}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,20 @@
+---
+title: Contractor Categories
+permalink: /view-all-categories/
+---
+
+<div class="contractorsMenu">
+  <div class="container">
+    <button type="button" class="contractorsMenu-btn">CHOOSE FROM BELOW...</button>
+    <ul class="menu nav nav-pills nav-stacked">
+      {% for title in site.data.config.titles %}
+      <li>
+        <a href="/contractors/{{ title.key }}/" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="/contractors/">See All</a>
+      </li>
+    </ul>
+  </div>
+</div>

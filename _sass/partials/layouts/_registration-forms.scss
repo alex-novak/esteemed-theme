@@ -1,0 +1,88 @@
+/**
+ * @file
+ * Registration forms
+ */
+
+.page-employers,
+.page-contractors,
+.page-user {
+  background-color: $grey--lightest;
+
+  ul.tabs.nav-tabs.primary {
+    border: none!important;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35)!important;
+    margin: 0px!important;
+  }
+  
+  .adminNavigation {
+    .adminTabs ul.nav.nav-tabs.primary {
+      margin: 0px!important; 
+    }
+    padding-top: 30px;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 50px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 20px;
+    }
+
+    .adminTabs {
+      margin: 0 auto;
+      max-width: 540px;
+    }
+  }
+
+  .main {
+    form:not(#mc-embedded-subscribe-form):not(#invite-form) {
+      padding-bottom: 30px;
+
+      @include media-breakpoint-up(sm) {
+        padding-bottom: 50px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 100px;
+      }
+
+      > div {
+        margin: 0 auto;
+        max-width: 540px;
+      }
+
+      .help-block,
+      .help-block small {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .form-actions {
+        input {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+
+  .fieldset-description {
+    padding-bottom: 24px;
+  }
+}
+
+// Employer Registration
+h1.title {
+  margin-top: 60px;
+}
+
+h3.employer {
+  text-align: center;
+}
+
+.you h3:before {
+  color: $newblue--lightest2;
+  content: '\e98e';
+  font-family: 'MobiriseIcons';
+  font-size: 38px;
+  margin-right: 10px;
+}

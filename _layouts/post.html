@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+{% assign author = site.data.authors[page.author] %}
+{% assign category = page.categories | first %}
+
+{% if page.image %}
+  <div class="blog-post__content--image">
+    <img src="{{ page.image }}" alt="Header Image">
+  </div>
+{% endif %}
+
+<div class="container breadcrumb">
+  <a href="/blog/">Blog</a>
+  {% if category %}
+  <span class="breadcrumb--chevron">></span>
+  <a href="/blog/category/{{ category | trim | downcase | uri_escape }}/">{{ category }}</a>
+  {% endif %}
+</div>
+
+<div class="container blog-post">
+  <h1>{{ page.title }}</h1>
+  <div class="blog-post__author">By <span><a href="/blog/author/{{ page.author }}/">{{ author.name }}</a></span></div>
+  <div class="blog-post__date">{{ page.date | date: "%m.%-d.%Y" }}</div>
+  <div class="blog-post__content">
+    {{ page.content | markdownify }}
+  </div>
+
+  <div class="post-categories">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="post-categories--title">Category: </span>
+        {% for category in page.categories %}
+        <a href="/blog/category/{{ category }}/">{{ category }}</a>
+        {% unless forloop.last %}<span class="space-between">,</span>{% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post__author-block">
+    <div class="row">
+      <div class="blog-post__author-block--container col-12 col-lg-8">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="blog-post__author-block--image">
+              <a href="{{ author.url }}"><img src="{% if author.image %}{{ author.image }}{% else %}/img/profile-pic.png{% endif %}" alt="Profile Image"></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="blog-post__author-block--name">
+              <a href="/blog/author/{{ page.author }}">{{ author.name }}</a>
+            </div>
+            <div class="blog-post__author-block--bio">
+              {{ author.bio }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+{% assign dir = page.dir | split: "/" %}
+{% assign subdir = dir[2] %}
+{% assign dir = dir[1] %}
+{%- if dir == "contractors" and subdir or dir == "skills" -%}
+{%- assign title = page.value -%}
+{%- assign image = site.url | append: "/assets/img/StartUp-Programming-Team-509559078_2125x1416.jpeg" -%}
+{%- elsif dir == "profile" -%}
+{%- assign title = page._name -%}
+{%- assign image = page.image -%}
+{%- else -%}
+{%- assign title = page.title -%}
+{%- assign image = site.url | append: "/assets/img/StartUp-Programming-Team-509559078_2125x1416.jpeg" -%}
+{%- endif -%}
+{%- assign title = title | append: ' | ' | append: site.title -%}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ site.title }} is the best source for pre-screened contract {{ site.vertical }} resources." />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <meta name="rating" content="general" />
+  <meta name="rights" content="Copyright {{ site.title }} an Esteemed Inc. business - 2019 / 2020" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:image" content="{{ image }}" />
+  <meta property="og:image:width" content="690" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:height" content="430" />
+  <meta property="og:country_name" content="United States" />
+  <meta property="og:email" content="services@esteemed.io" />
+  <meta property="og:phone_number" content="360.701.7353" />
+  <meta property="og:region" content="Northwest" />
+  <meta property="og:locality" content="Seattle" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:site" content="@{{ site.twitter }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="{{ site.url }}" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:image:width" content="979" />
+  <meta name="twitter:image" content="{{ image }}" />
+  <meta name="twitter:image:height" content="457" />
+  <meta name="twitter:image:alt" content="{{ site.title }}" />
+  <meta name="dcterms.title" content="{{ title }}" />
+  <meta name="dcterms.type" content="Text" />
+  <meta name="dcterms.identifier" content="{{ site.url }}{{ page.url }}" />
+  <meta name="dcterms.format" content="text/html" />
+  <title>{{ title }}</title>
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" media="all" />
+  <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="all" />
+</head>

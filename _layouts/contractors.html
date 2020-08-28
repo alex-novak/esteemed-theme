@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+{% assign dir = page.dir | split: '/'  %}
+{% assign subdir = dir[2] %}
+{% assign dir = dir[1] %}
+{% if dir == "contractors" %}
+{% assign profiles = site.data.profiles | where: 'titles', page.key %}
+<div class="contractorsMenu">
+  <div class="block__content">
+    <div class="container">
+      <button type="button" class="contractorsMenu-btn js-contractorsMenuBtn jquery-once-1-processed"></button>
+      <ul class="menu nav nav-pills nav-stacked">
+        {% for title in site.data.config.titles %}
+        <li>
+          <a href="/contractors/{{ title.key }}/" title="{{ site.data.config.valueMap[title.key] }}"{% if subdir == title.key %} class="active"{% endif %}>{{ site.data.config.valueMap[title.key] }}</a>
+        </li>
+        {% endfor %}
+        <li class="last leaf menu-mlid-3516 menu-link-see-all">
+          <a href="/contractors/">See All</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% else %}
+{% assign profiles = site.data.profiles | where: 'skills', page.key %}
+{% endif %}
+
+{% assign contractor = site.data.contractors[page.key] %}
+<div class="contractorsHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6 contractorsHeader__left">
+        <h1>{{ contractor.title }}</h1>
+        <div class="contractorsHeader__left--bottom">
+          <a class="contractorsHeader__left--button btn btn-primary" href="#contact-form">Get Started</a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6 contractorsHeader__right">
+        <div class="contractorsHeader__right--image" style="background-image: url({{ contractor.image }})"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if profiles.size > 0 %}
+<div class="contractorsContent sectionGrey">
+  <div class="block__content">
+    <div class="container">
+      <div class="view-content">
+        <div id="contractorsSlider" class="contractorsSlider carousel slide" data-interval="false" data-wrap="false">
+          <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
+            {% for profile_id in site.data.contractors[page.key].profiles %}
+            {% assign profile = profiles | where: 'id', profile_id | first %}
+            {% include card.html content=profile first=forloop.first %}
+            {% endfor %}
+            <div class="contractorBoxWrap carousel-item col-md-3">
+              <div class="contractorBox signUp">
+                <h3 class="contractorBox-signUp">Sign up for FREE to view more great contractors</h3>
+                <a href="/getting-started/" class="btn btn--blue btn-signUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <a href="#contractorsSlider" data-slide="prev" class="carousel-control-prev" aria-label="previous" aria-disabled="false" style="display: none;">&nbsp;</a>
+          <a href="#contractorsSlider" data-slide="next" class="carousel-control-next" aria-label="next" aria-disabled="false" style="display: block;">&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+<h1>New talent with this skillset coming soon!</h1>
+{% endif %}
+<div class="container" style="padding-bottom: 20px">
+  {% include howitworks-foremployers.html %}
+</div>
+
+{% include contact-form.html%}

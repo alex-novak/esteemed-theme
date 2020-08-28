@@ -1,0 +1,96 @@
+/**
+ * @file
+ * Contractors view
+ *
+ * Located on the pages: contractors/*
+ */
+
+.contractorsView {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.contractorsHeader {
+  background-color: $azure--new;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+
+    @include media-breakpoint-up(md) {
+      min-height: 415px;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      order: 2;
+    }
+
+    h1 {
+      text-align: left;
+    }
+
+    &--button {
+      margin-right: 3rem;
+    }
+  }
+
+  &__right {
+    @include media-breakpoint-down(md) {
+      min-height: 200px;
+      order: 1;
+    }
+
+    &--image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+    }
+  }
+}
+
+.contractorsContent {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.contact-form {
+  background: $newblue--light;
+  color: $white;
+  margin-top: 3rem;
+  padding-top: 5rem;
+
+  &__header {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 60%;
+    }
+  }
+
+  &__description {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin: auto;
+    text-align: left;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 85%;
+    }
+  }
+
+  &__wrapper {
+    margin: 5rem auto 0 auto;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 85%;
+    }
+  }
+}
+

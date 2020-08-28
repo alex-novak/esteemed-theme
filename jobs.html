@@ -1,0 +1,36 @@
+---
+title: Jobs
+layout: jobs
+permalink: /jobs/
+class: "jobs-listing"
+---
+
+<div class="container">
+  <h1>Available Jobs</h1>
+  <div class="view-content">
+    {% for job in site.data.jobs %}
+    <div class="views-row">
+      <div class="views-field-title">
+        <a href="/job/{{ job.key }}">{{ job.title }}</a>
+      </div>
+      <div class="views-field-field-job-location">
+        {{ site.data.config.valueMap[job.location_req] }}
+      </div>
+      <div class="views-field-body">
+        {{ job.description | strip | strip_html | truncatewords: 40 }}
+      </div>
+      <div class="views-field-field-job-category">
+        <div class="field-content">
+          <div class="item-list">
+            <ul>
+              {% for category in job.categories %}
+              <li>{{ site.data.config.valueMap[category] }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
