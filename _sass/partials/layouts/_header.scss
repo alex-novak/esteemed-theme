@@ -414,3 +414,41 @@ html body.admin-menu {
     width: 220px;
   }
 }
+
+.navbar {
+
+  .navbar-collapse {
+
+    .navbar-nav {
+
+      li {
+
+        > a {
+          color: $white;
+          font-family: $font-poppinsregular;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .dropdown-menu {
+
+        a {
+              position: relative;
+    display: block;
+    padding: 15px 35px 15px 15px;
+    font-family: $font-poppinsregular;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    transition: all .3s;
+        }
+      }
+    }
+  }
+
+  .region-navigation-right {
+    align-items: center;
+    display: flex;
+  }
+}
