@@ -1,75 +1,58 @@
 {% assign dir = page.url | split: '/'  %}
-<header class="siteHeader">
-  <div class="container">
-    <div class="siteHeader-body">
-      <div class="siteHeader-body-left">
-        <div class="region region-navigation-left">
-          <div class="block block-drupalcontractors-logos logo logo--light block--">
-            <div class="block__content">
-              <a href="/" title="{{ site.title }}">
-                <img typeof="foaf:Image" src="{{ site.logo.white }}" alt="{{ site.title }}" title="{{ site.title }}" />
-              </a>
-            </div>
-          </div>
-          <div class="block block-drupalcontractors-logos logo logo--dark block--">
-            <div class="block__content">
-              <a href="/" title="{{ site.title }}">
-                <img typeof="foaf:Image" src="{{ site.logo.black }}" alt="{{ site.title }}" title="{{ site.title }}" />
-              </a>
-            </div>
-          </div>
-          <div class="block block-system siteMenu block-menu block--none">
-            <div class="block__content">
-              <ul class="menu nav">
-                <li class="first expanded siteMenu-second js-firstLvl menu-link-browse"><span class="nolink">Browse<span class="caret"></span></span>
-                  <ul class="menu nav-pills nav-stacked nav flex-column" style="display:none">
-                    <li class="first expanded siteMenu-third js-secondLvl menu-link-browse-contractors"><span class="nolink">Browse Contractors<span class="caret"></span></span>
-                      <ul class="menu nav-pills nav-stacked nav flex-column">
-                        {% for title in site.data.config.titles %}
-                        <li class="leaf">
-                          <a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a>
-                        </li>
-                        {% endfor %}
-                        <li class="last leaf menu-link-see-all"><a href="/contractors/">See All</a></li>
-                      </ul>
-                    </li>
-                    <li class="collapsed siteMenu-third js-secondLvl menu-link-browse-jobs"><a href="/jobs">Browse
-                        Jobs</a></li>
-                    <li class="last expanded siteMenu-third js-secondLvl menu-link-trending-skills"><span
-                        class="nolink">Trending Skills<span class="caret"></span></span>
-                      <ul class="menu nav">
-                        {% for skill in site.data.config.skills %}
-                        <li class="leaf">
-                          <a href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a>
-                        </li>
-                        {% endfor %}
-                      </ul>
-                    </li>
+<header id="header" class="siteHeader" role="header">
+    <nav id="js-bootstrap-offcanvas" class="navbar navbar-expand-lg navbar-offcanvas-right navbar-offcanvas-touch">
+      <div class="container">
+        <a class="navbar-brand" href="/" title="{{ site.title }}">
+          <img typeof="foaf:Image" src="/assets/img/wpcont-logo-wht-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="d-inline-block align-top"/>
+        </a>
+        <button class="navbar-toggler offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Trending Skills<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    {% for skill in site.data.config.skills %}
+                    <li><a class="dropdown-item" href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a></li>
+                    {% endfor %}
                   </ul>
                 </li>
-                <li class="last leaf active menu-link-how-it-works">
-                  <a href="{% if dir %}/{% endif %}#how-it-works" class="active">How it works</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/jobs/">Browse Jobs</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Browse Contractors<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    {% for title in site.data.config.titles %}
+                    <li><a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a></li>
+                    {% endfor %}
+                    <li><a href="/contractors/">See All</a></li>
+                  </ul>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a href="{% if dir %}/{% endif %}#how-it-works" class="nav-link">How it works</a>
+            </li>
+          </ul>
+          <div class="region region-navigation-right">
+            <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--account block--">
+              <div class="block__content">
+                <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
+              </div>
+            </div>
+            <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--btn block--">
+              <div class="block__content">
+                <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="siteHeader-body-right">
-        <div class="region region-navigation-right">
-          <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--account block--">
-            <div class="block__content">
-              <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
-            </div>
-          </div>
-          <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--btn block--">
-            <div class="block__content">
-              <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
-            </div>
-          </div>
-        </div>
-        <button class="hamburger js-hamburger"><i class="fa fa-bars" aria-hidden="true"></i></button>
-      </div>
-    </div>
+    </nav>
   </div>
 </header>
