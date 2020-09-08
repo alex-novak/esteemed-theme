@@ -5,8 +5,8 @@
         <a class="navbar-brand" href="/" title="{{ site.title }}">
           <img typeof="foaf:Image" src="/assets/img/wpcont-logo-wht-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="d-inline-block align-top"/>
         </a>
-        <button class="navbar-toggler offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler js-hamburger offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse mainMenu">
           <ul class="navbar-nav mr-auto">
@@ -56,3 +56,52 @@
     </nav>
   </div>
 </header>
+<div class="mobileMenuHolder js-mobileMenuHolder"></div>
+<div class="mobileMenu js-mobileMenu">
+    <div class="mobileMenu-inner">
+      <button class="mobileMenu-close js-closeMobileMenu"><i class="fa fa-times" aria-hidden="true"></i></button>
+      <div class="region region-navigation-mobile">
+        <div class="block block-multiblock mobileMenu-point mobileMenu-point--menu block-system block-system-main-menu-instance block--none">
+          <div class="block__content">
+            <ul class="menu nav menu-nav-mobile">
+              <li class="first expanded siteMenu-second js-firstLvlMobile menu-link-browse"><span class="nolink">Browse<span class="caret"></span></span>
+               <ul class="menu nav-pills nav-stacked nav flex-column">
+                    <li class="first expanded siteMenu-third js-secondLvl menu-link-browse-contractors"><span
+                              class="nolink">Browse Contractors<span class="caret"></span></span>
+                      <ul class="menu nav-pills nav-stacked nav flex-column">
+                         {% for title in site.data.config.titles %}
+                          <li class="leaf">
+                            <a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a>
+                          </li>
+                          {% endfor %}
+                          <li class="last leaf menu-link-see-all"><a href="/contractors/">See All</a></li>
+                        </ul>
+                    </li>
+                    <li class="collapsed siteMenu-third js-secondLvl menu-link-browse-jobs"><a href="/jobs">Browse Jobs</a>
+                    </li>
+                    <li class="last expanded siteMenu-third js-secondLvl menu-link-trending-skills"><span
+                              class="nolink">Trending Skills<span class="caret"></span></span>
+                      <ul class="menu nav">
+                          {% for skill in site.data.config.skills %}
+                          <li class="leaf">
+                            <a href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                    </li>
+                  </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block block-multiblock mobileMenu-point mobileMenu-point--link block-block block-block-3-instance block--">
+          <div class="block__content">
+            <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
+          </div>
+        </div>
+        <div class="block__content">
+          <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
+        </div>
+      </div>
+    </div>
+  </div>

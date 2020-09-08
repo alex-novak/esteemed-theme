@@ -5,7 +5,7 @@
  * Located on the pages: All page
  */
 
-.hamburger {
+.navbar-toggler {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -21,6 +21,9 @@
   outline: 0;
   &:hover {
     color: $blue;
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -108,6 +111,7 @@
         > ul {
           display: none;
           margin-left: 0 !important;
+          margin-top: -50px;
           > li {
             border-top: 1px solid $grey--light;
             background: $grey--most;
@@ -196,6 +200,7 @@
         &:focus {
           color: $grey;
           background: transparent;
+          box-shadow: none;
         }
         @include media-breakpoint-down(sm) {
           color: $grey--darkest !important;
@@ -215,6 +220,25 @@
   }
   &-search {
     padding: 20px;
+  }
+  .menu-nav-mobile {
+    display: block;
+  }
+
+  .sign_up-button a {
+    display: block;
+    height: auto;
+    padding: 10px 0;
+    background: transparent;
+    border: 0;
+    font-family: $fontFamily-bold;
+    font-size: 16px;
+    line-height: 1;
+    color: $grey--black;
+    text-align: left;
+    transition: none;
+    margin-left: 20px;
+    margin-top: 10px;
   }
 }
 
