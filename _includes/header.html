@@ -8,24 +8,24 @@
         <button class="navbar-toggler offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse mainMenu">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">Trending Skills<span class="caret"></span></a>
+                  <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Trending Skills<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     {% for skill in site.data.config.skills %}
                     <li><a class="dropdown-item" href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a></li>
                     {% endfor %}
                   </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-second">
                   <a class="nav-link" href="/jobs/">Browse Jobs</a>
                 </li>
                 <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">Browse Contractors<span class="caret"></span></a>
+                  <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Browse Contractors<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     {% for title in site.data.config.titles %}
                     <li><a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a></li>
