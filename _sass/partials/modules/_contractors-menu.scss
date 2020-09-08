@@ -45,6 +45,10 @@ $bg-active-link: $grey--lightest;
       border-bottom: 2px solid $white;
       border-right: 2px solid $white;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   ul.menu {
