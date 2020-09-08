@@ -72,4 +72,8 @@
       color: $newblue--lightest !important;
     }
   }
+
+  .open-caret:after {
+    transform: rotate(0deg) !important;
+  }
 }
