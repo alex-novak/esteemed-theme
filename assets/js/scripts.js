@@ -125,3 +125,34 @@ $('.js-contractorsMenuBtn').on('click', function() {
   $(this).toggleClass('is-open');
   $(this).siblings('ul').slideToggle();
 })
+
+    var $mobileMenuHolder = $('.js-mobileMenuHolder'),
+        $mobileMenuClose = $('.js-closeMobileMenu'),
+        $hamburger = $('.js-hamburger'),
+        $body = $('body');
+
+    $hamburger.on('click', function() {
+      $body.addClass('is-openMenu');
+      $mobileMenuHolder.show();
+    });
+
+    $mobileMenuHolder.on('click', function() {
+      $body.removeClass('is-openMenu');
+      $mobileMenuHolder.hide();
+    });
+
+    $mobileMenuClose.on('click', function() {
+      $body.removeClass('is-openMenu');
+      $mobileMenuHolder.hide();
+    });
+
+    $('.mobileMenu .js-firstLvlMobile > span').on('click', function() {
+      var $thisFirstLvl = $(this),
+          $thisParent = $thisFirstLvl.closest('.js-firstLvlMobile');
+      $thisParent.toggleClass('is-open');
+    });
+    $('.mobileMenu .js-secondLvl > span').on('click', function() {
+      var $thisFirstLvl = $(this),
+          $thisParent = $thisFirstLvl.closest('.js-secondLvl');
+      $thisParent.toggleClass('is-open');
+    });
