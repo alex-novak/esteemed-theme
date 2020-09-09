@@ -34,11 +34,11 @@ plugins:
 
 jekyll_get_json:
   - data: profiles
-    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/profiles?channel=CUN3PEEAY'
+    json: 'mock/profiles.json'
   - data: jobs
-    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/jobs'
+    json: 'mock/jobs.json'
   - data: config
-    json: 'https://khfmg9m8l2.execute-api.us-east-1.amazonaws.com/prod/config'
+    json: 'mock/config.json'
 
 author_dir: "blog/author"
 author_title_prefix: "Blog - By "

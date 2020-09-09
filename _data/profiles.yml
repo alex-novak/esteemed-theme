@@ -1,0 +1,57 @@
+---
+- id: "UKBRBK1R9"
+  name: "Chris M."
+  image: "https://avatars.slack-edge.com/2019-07-29/709670045680_dd398e59abcc9040b64d_512.png"
+  location: "5430, 66th Avenue Northwest, Olympia, Thurston County, Washington, United States, 98502, 9664"
+  availability: "open"
+  english: "native"
+  titles:
+    - architect
+    - art_director
+    - backend
+    - frontend
+    - full_stack
+    - pm
+    - qa_tester
+    - sys_admin
+    - ux_designer
+    - visual_designer
+  languages:
+    - css
+    - html
+  skills:
+    - communication
+  citizenship:
+  drupal_bio:
+  wp_experience:
+  wp_bio:
+- id: "UL8N9QSLU"
+  name: "Albert V."
+  image: "https://avatars.slack-edge.com/2020-03-10/991928571088_f475926b866c839e9397_512.jpg"
+  location: "Maitland, Florida, US"
+  availability: hours_10
+  english: proficient
+  titles:
+    - architect
+    - art_director
+    - backend
+    - frontend
+    - full_stack
+    - pm
+    - qa_tester
+    - sys_admin
+    - ux_designer
+    - visual_designer
+  languages:
+    - php
+    - html
+    - css
+  skills:
+    - api
+    - cli
+    - github
+    - lamp
+  citizenship: citizen
+  drupal_bio: "I'm awesome."
+  wp_experience: "entry"
+  wp_bio: "I'm learning WordPress!"

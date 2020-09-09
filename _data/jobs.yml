@@ -1,0 +1,14 @@
+---
+- key: 0
+  title: "PHP Developer - Custom E-commerce Gateway (Part-time)"
+  description: "Example description"
+  start_date": "2020-05-16"
+  attendance: remote
+  engagement: contract
+  experience: intermediate
+  timezone: ET
+  duration: 6_month_ext
+  categories:
+  - backend
+  location_req: anywhere
+  weekly_hours: hours_20

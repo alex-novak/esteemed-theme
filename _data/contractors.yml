@@ -1,0 +1,109 @@
+---
+main:
+  - UKBRBK1R9
+  - UL8N9QSLU
+architect:
+  title: "Hire your next star architect to scale your business."
+  image: "/assets/img/contractors/architect.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+art_director:
+  title: "Hire your next star art director to scale your business."
+  image: "/assets/img/contractors/art_director.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+backend:
+  title: "Hire your next star backend developer to scale your business."
+  image: "/assets/img/contractors/backend.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+frontend:
+  title: "Hire your next star frontend developer to scale your business."
+  image: "/assets/img/contractors/frontend.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+full_stack:
+  title: "Hire your next star full-stack developer to scale your business."
+  image: "/assets/img/contractors/full_stack.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+pm:
+  title: "Hire your next star project manager to scale your business."
+  image: "/assets/img/contractors/pm.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+qa_tester:
+  title: "Hire your next star QA tester to scale your business."
+  image: "/assets/img/contractors/qa_tester.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+sys_admin:
+  title: "Hire your next star system administrator to scale your business."
+  image: "/assets/img/contractors/sys_admin.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+ux_designer:
+  title: "Hire your next star UX designer to scale your business."
+  image: "/assets/img/contractors/ux_designer.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+visual_designer:
+  title: "Hire your next star visual designer to scale your business."
+  image: "/assets/img/contractors/visual_designer.png"
+  profiles:
+    - UKBRBK1R9
+    - UL8N9QSLU
+api:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+adobe_creative_suite:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+bootstrap:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+cli:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+communication:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+custom_themes:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+ecommerce:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+gitflow:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+jquery:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+lamp:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+mobile_design:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+mysql:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+sass:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+seo:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
+ui:
+  title: "Let's talk about what Creative Cloud can do for your business."
+  image: "/assets/img/contractors/contractor_example.png"
