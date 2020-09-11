@@ -80,6 +80,10 @@
     line-height: 1;
     background: transparent;
     outline: 0;
+
+    .fa-times {
+      color: $grey--darkest;
+    }
   }
   &-point {
     border-bottom: 1px solid $grey--light;
@@ -243,7 +247,7 @@
 }
 
 .is-openMenu {
-  .mobileMenu {
+  .navbar-collapse {
     right: 0;
   }
   .scrollHeader {

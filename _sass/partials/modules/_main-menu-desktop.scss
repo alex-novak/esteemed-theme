@@ -18,8 +18,11 @@
   }
 
   #navbarDropdown {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 
   .dropdown-menu {
