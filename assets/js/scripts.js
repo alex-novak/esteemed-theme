@@ -102,11 +102,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
   var $subMenu = $(this).next('.dropdown-menu');
   $subMenu.toggleClass('show');
+
   if (!$(this).hasClass('open-caret')) {
     $(this).addClass('open-caret');
   }
-
-
 
   $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
     $('.dropdown-submenu .show').removeClass('show');
@@ -117,6 +116,7 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
     $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
     $(this).removeClass('open-caret');
   }
+
   return false;
 });
 
@@ -126,33 +126,34 @@ $('.js-contractorsMenuBtn').on('click', function() {
   $(this).siblings('ul').slideToggle();
 })
 
-    var $mobileMenuHolder = $('.js-mobileMenuHolder'),
-        $mobileMenuClose = $('.js-closeMobileMenu'),
-        $hamburger = $('.js-hamburger'),
-        $body = $('body');
+var $mobileMenuHolder = $('.js-mobileMenuHolder'),
+    $mobileMenuClose = $('.js-closeMobileMenu'),
+    $hamburger = $('.js-hamburger'),
+    $body = $('body');
 
-    $hamburger.on('click', function() {
-      $body.addClass('is-openMenu');
-      $mobileMenuHolder.show();
-    });
+$hamburger.on('click', function() {
+  $body.addClass('is-openMenu');
+  $mobileMenuHolder.show();
+});
 
-    $mobileMenuHolder.on('click', function() {
-      $body.removeClass('is-openMenu');
-      $mobileMenuHolder.hide();
-    });
+$mobileMenuHolder.on('click', function() {
+  $body.removeClass('is-openMenu');
+  $mobileMenuHolder.hide();
+});
 
-    $mobileMenuClose.on('click', function() {
-      $body.removeClass('is-openMenu');
-      $mobileMenuHolder.hide();
-    });
+$mobileMenuClose.on('click', function() {
+  $body.removeClass('is-openMenu');
+  $mobileMenuHolder.hide();
+});
 
-    $('.mobileMenu .js-firstLvlMobile > span').on('click', function() {
-      var $thisFirstLvl = $(this),
-          $thisParent = $thisFirstLvl.closest('.js-firstLvlMobile');
-      $thisParent.toggleClass('is-open');
-    });
-    $('.mobileMenu .js-secondLvl > span').on('click', function() {
-      var $thisFirstLvl = $(this),
-          $thisParent = $thisFirstLvl.closest('.js-secondLvl');
-      $thisParent.toggleClass('is-open');
-    });
+$('.mobileMenu .js-firstLvlMobile > span').on('click', function() {
+  var $thisFirstLvl = $(this),
+      $thisParent = $thisFirstLvl.closest('.js-firstLvlMobile');
+  $thisParent.toggleClass('is-open');
+});
+
+$('.mobileMenu .js-secondLvl > span').on('click', function() {
+  var $thisFirstLvl = $(this),
+      $thisParent = $thisFirstLvl.closest('.js-secondLvl');
+  $thisParent.toggleClass('is-open');
+});
