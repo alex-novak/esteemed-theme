@@ -75,14 +75,10 @@ layout: default
 {% endif %}
 <div class="container">
   <div class="role-description">
-    <div class="mian-role-heading">
-      {% assign vowels = "architect,art_director" | split: "," %}
-      {% assign is_vowel = vowels | where_exp: "item", "item == page.key" | join: "" %}
-      <h2 style="text-align: center;padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
-    </div>
-    <div class="description-text">
-      <p>{{ contractor.description | markdownify }}</p>
-    </div>
+    {% assign vowels = "architect,art_director" | split: "," %}
+    {% assign is_vowel = vowels | where_exp: "item", "item == page.key" | join: "" %}
+    <h2 style="text-align: center;padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
+    <p>{{ contractor.description | markdownify }}</p>
   </div>
 </div>
 <div class="container" style="padding-bottom: 20px">
