@@ -14,6 +14,7 @@ $('.expanded > span').on('click', function(e) {
 });
 $('.siteFooter-body .block__title').on('click', function() {
   if ($(window).width() <= 768) {
+    $(this).toggleClass('opened');
     $(this).siblings().toggle('slow');
   }
 });
