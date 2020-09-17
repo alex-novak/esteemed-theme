@@ -100,8 +100,28 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   });
 });
 
+// Remove active submenus when closing main Browse menu.
+$('.nav-link.dropdown-toggle').click(function() {
+  var $dropdown = $(this).closest('.dropdown');
+
+  if ($dropdown.hasClass('show')) {
+    $dropdown.find('.open-caret').removeClass('open-caret');
+  }
+});
+
+// Main menu submenus.
 $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
   var $subMenu = $(this).next('.dropdown-menu');
+
+  $('.dropdown-submenu .dropdown-menu').each(function() {
+    var $this = $(this);
+
+    if($this[0] != $subMenu[0]) {
+      $this.removeClass('show');
+      $this.prev('.open-caret').removeClass('open-caret');
+    }
+  });
+
   $subMenu.toggleClass('show');
 
   if (!$(this).hasClass('open-caret')) {
