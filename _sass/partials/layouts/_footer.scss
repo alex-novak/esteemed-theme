@@ -126,6 +126,13 @@
         display: none;
       }
     }
+
+    &.opened {
+
+      &:after {
+        transform: rotate(225deg);
+      }
+    }
   }
 
   &.is-open {
