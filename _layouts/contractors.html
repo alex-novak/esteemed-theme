@@ -77,7 +77,7 @@ layout: default
   <div class="role-description">
     {% assign vowels = "architect,art_director" | split: "," %}
     {% assign is_vowel = vowels | where_exp: "item", "item == page.key" | join: "" %}
-    <h2 style="text-align: center;padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
+    <h2 style="padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
     <p>{{ contractor.description | markdownify }}</p>
   </div>
 </div>
