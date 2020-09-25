@@ -73,6 +73,14 @@ layout: default
 {% else %}
 <h1>New talent with this skillset coming soon!</h1>
 {% endif %}
+
+<div class="container" style="padding-bottom: 20px">
+  <h2 style="text-align: center; padding-top: 2em;">How it works</h2>
+  {% include howitworks-foremployers.html %}
+
+  {% include agencies.html %}
+</div>
+
 <div class="container">
   <div class="role-description">
     {% assign vowels = "architect,art_director" | split: "," %}
@@ -80,12 +88,6 @@ layout: default
     <h2 style="padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
     <p>{{ contractor.description | markdownify }}</p>
   </div>
-</div>
-<div class="container" style="padding-bottom: 20px">
-  <h2 style="text-align: center; padding-top: 2em;">How it works</h2>
-  {% include howitworks-foremployers.html %}
-
-  {% include agencies.html %}
 </div>
 
 {% include contact-form.html%}
