@@ -7,16 +7,21 @@
 
 .contractorBoxWrap {
   height: 100%;
-  background: $white;
-  margin: 0 15px;
-  padding: 5px;
+  padding: 0;
 }
 
 .contractorBox {
-  position: relative;
+  background: $white;
   height: 100%;
-  padding: 25px 20px 81px;
-  border: 3px solid $grey--lightest;
+  margin: 0 15px;
+  padding: 5px;
+  position: relative;
+  
+  &Content {
+    border: 3px solid $grey--lightest;
+    height: 100%;
+    padding: 25px 20px 81px;
+  }
 
   &-img {
     margin-bottom: 20px;
@@ -88,7 +93,7 @@
   &-signUp {
     color: $grey--light;
     margin-top: 50%;
-    padding: 0 50px;
+    padding: 0 40px;
   }
 
   .btn {
@@ -107,5 +112,10 @@
 
   &.signUp {
     text-align: center;
+
+    .contractorBoxContent {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
   }
 }
