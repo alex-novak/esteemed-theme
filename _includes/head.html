@@ -16,7 +16,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ site.title }} is the best source for pre-screened contract {{ site.vertical }} resources." />
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="keywords" content="{{ site.keywords }}" />
   <meta name="rating" content="general" />
   <meta name="rights" content="Copyright {{ site.title }} an Esteemed Inc. business - 2019 / 2020" />
