@@ -73,3 +73,55 @@
     display: none;
   }
 }
+
+.hamburger-top {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  height: auto;
+  padding: 5px;
+  background: transparent;
+  border: 0;
+  color: gray;
+  font-size: 30px;
+  line-height: 1;
+  transition: all .3s;
+  outline: 0;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.mobile-buttons {
+  .right-button {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid $black;
+    margin: 0px 10px;
+    border-radius: 6px;
+    a {
+      color: $black;
+    }
+  }
+  .right-two-button {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid $black;
+    margin: 10px;
+    background: $black;
+    border-radius: 6px;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.display-buttons {
+  background: $white;
+  z-index: 9999999 !important;
+  display: block;
+  .collapse {
+    padding: 1px;
+  }
+}

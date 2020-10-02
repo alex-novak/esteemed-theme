@@ -7,7 +7,7 @@
 
 .heroBanner {
   background-color: $newblue;
-  padding-top: 90px;
+  padding-top: 145px;
   padding-bottom: 50px;
 
   @include media-breakpoint-up(lg) {
@@ -152,23 +152,23 @@
   background-repeat:no-repeat;
   background-size: cover;
   background-position-y: top;
-  background-color: #444;
-  color: #fff;
+  background-color: $grey--dark;
+  color: $white;
   min-height: 500px;
   padding-top: 90px;
   padding-bottom: 50px;
 
   h3 {
-    font-family: "catamaranthin",Helvetica,Arial,sans-serif;
+    font-family: $font-catamaranthin;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 2;
   }
 
   p {
-    font-family: "catamaranthin",Helvetica,Arial,sans-serif;
-    font-weight: normal;
-    font-size: 48px;
+    font-family: $font-catamaranthin;
+    font-weight: normal; 
+    font-size: 4.8rem;
   }
 
   @include media-breakpoint-down(md) {

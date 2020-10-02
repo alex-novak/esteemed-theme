@@ -109,7 +109,7 @@
 //style for header (white)
 .siteHeader {
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
   z-index: 99;
   height: 56px;
@@ -119,7 +119,7 @@
   transition: background .3s;
 
   @include media-breakpoint-up(lg) {
-    height: 76px;
+    height: 60px;
     padding-top: 10px;
   }
 
@@ -130,7 +130,7 @@
     justify-content: space-between;
 
     @include media-breakpoint-up(lg) {
-      height: 75px;
+      height: 50px;
     }
 
     .block-custom-search-blocks {
@@ -430,6 +430,122 @@ html body {
       top: 29px;
     }
   }
+}
+
+.global-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  height: 50px;
+  width: 100%;
+  background: $white;
+  transition: background .3s;
+  @include media-breakpoint-up(lg) {
+    height: 50px;
+  }
+  &-body {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    @include media-breakpoint-up(lg) {
+      height: 50px;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      > .region {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        > .block {
+          display: none;
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
+        }
+        .logo {
+          display: block;
+          flex: 0 0 150px;
+          transition: opacity .3s;
+          @include media-breakpoint-up(xs) {
+            margin-right: 20px;
+          }
+          @include media-breakpoint-up(lg) {
+            margin-right: 60px;
+          }
+          &--light {
+            display: none;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &-right {
+      > .region {
+        display: none;
+        height: 100%;
+        align-items: center;
+        @include media-breakpoint-up(lg) {
+          display: flex;
+        }
+      }
+      &-link {
+        transition: opacity .3s;
+        @include media-breakpoint-up(lg) {
+        }
+        @include media-breakpoint-up(xl) {
+          margin-left: 45px;
+        }
+        &--account {
+          margin: 0 10px;
+        }
+      }
+      .right-two-button a
+      {
+        background: #000;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 7px;
+        text-align: center;  
+        border: 2px solid #000;
+
+        &:hover{
+          background: #fff;
+          color: #000;
+          border: 2px solid #000;
+        }
+      }
+      .right-button a{
+        background: #fff;
+        padding: 8px 40px;
+        border: 2px solid #000;
+        border-radius: 6px;
+
+        &:hover{
+          background: #000;
+          color: #fff;
+        }
+      }
+
+      .btn {
+        font-size: 12px;
+        padding: $newblue--lightest2;
+      }
+    }
+  }
+
+  .hamburger-top {
+    display: block;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+.global-header-body .logo img {
+  width: 150px;
 }
 
 .logo {
