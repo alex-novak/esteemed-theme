@@ -1,60 +1,92 @@
 {% assign dir = page.url | split: '/'  %}
+<div id="skip-link">
+  <a href="#main" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+<header id="header-esteemed" class="global-header" role="header">
+  <div class="container">
+    <div class="global-header-body">
+      <div class="siteHeader-body-left">
+          <div class="logo">
+              <a href="https://esteemed.io" title="Esteemed">
+                <img typeof="foaf:Image" src="/assets/img/esteemed-bw-logo.svg" alt="Esteeemd IO" title="Esteemed" />
+              </a>
+          </div>      
+      </div>
+      <div class="global-header-body-right">
+        <div class="region region-navigation-right">
+          <div class="global-header-body-right-link global-header-body-right-link--account">
+              <div class="right-button"><a href="http://esteemed.slack.com/">Log In</a></div>
+          </div>
+          <div class="global-header-body-right-link global-header-body-right-link--btn">
+              <div class="right-two-button"><a href="#">Join Talent Network</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="mobile-buttons display-buttons">
+  <button type="button" class="hamburger-top" data-toggle="collapse" data-target="#menu-global"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+ <div id="menu-global" class="collapse">
+   <div class="right-button"><a  href="http://esteemed.slack.com/">Log In</a></div>
+   <div class="right-two-button"><a href="#">Join Talent Network</a></div>
+ </div>
+</div>
+</header>
 <header id="header" class="siteHeader" role="header">
-    <nav id="js-bootstrap-offcanvas" class="navbar navbar-expand-xl navbar-offcanvas-right navbar-offcanvas-touch">
-      <div class="container">
-        <a class="navbar-brand" href="/" title="{{ site.title }}">
-          <img typeof="foaf:Image" src="/assets/img/wpcont-logo-wht-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="align-top white-logo"/>
-          <img typeof="foaf:Image" src="/assets/img/wpcont-logo-blk-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="align-top black-logo"/>
-        </a>
-        <button class="navbar-toggler js-hamburger offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse mainMenu">
-          <button class="mobileMenu-close js-closeMobileMenu d-block d-lg-none"><i class="fa fa-times" aria-hidden="true"></i></button>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Trending Skills<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    {% for skill in site.data.config.skills %}
-                    <li><a class="dropdown-item" href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a></li>
-                    {% endfor %}
-                  </ul>
-                </li>
-                <li class="nav-item nav-item-second">
-                  <a class="nav-link" href="/jobs/">Browse Jobs</a>
-                </li>
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Browse Contractors<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    {% for title in site.data.config.titles %}
-                    <li><a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a></li>
-                    {% endfor %}
-                    <li><a href="/contractors/">See All</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item d-none d-lg-block">
-              <a href="{% if dir %}/{% endif %}#how-it-works" class="nav-link">How it works</a>
-            </li>
-          </ul>
-          <div class="region region-navigation-right">
-            <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--account block--">
-              <div class="block__content">
-                <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
-              </div>
+  <nav id="js-bootstrap-offcanvas" class="navbar navbar-expand-xl navbar-offcanvas-right navbar-offcanvas-touch">
+    <div class="container">
+      <a class="navbar-brand" href="/" title="{{ site.title }}">
+        <img typeof="foaf:Image" src="/assets/img/wpcont-logo-wht-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="align-top white-logo"/>
+        <img typeof="foaf:Image" src="/assets/img/wpcont-logo-blk-text.png" alt="{{ site.title }}" title="{{ site.title }}" class="align-top black-logo"/>
+      </a>
+      <button class="navbar-toggler js-hamburger offcanvas-toggle" type="button" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse mainMenu">
+        <button class="mobileMenu-close js-closeMobileMenu d-block d-lg-none"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Trending Skills<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  {% for skill in site.data.config.skills %}
+                  <li><a class="dropdown-item" href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+              <li class="nav-item nav-item-second">
+                <a class="nav-link" href="/jobs/">Browse Jobs</a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Browse Contractors<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  {% for title in site.data.config.titles %}
+                  <li><a href="/contractors/{{ title.key }}" title="{{ site.data.config.valueMap[title.key] }}">{{ site.data.config.valueMap[title.key] }}</a></li>
+                  {% endfor %}
+                  <li><a href="/contractors/">See All</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a href="{% if dir %}/{% endif %}#how-it-works" class="nav-link">How it works</a>
+          </li>
+        </ul>
+        <div class="region region-navigation-right">
+          <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--account block--">
+            <div class="block__content">
+              <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
             </div>
-            <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--btn block--">
-              <div class="block__content">
-                <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
-              </div>
+          </div>
+          <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--btn block--">
+            <div class="block__content">
+              <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
