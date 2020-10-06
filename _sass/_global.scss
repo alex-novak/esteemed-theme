@@ -19,7 +19,7 @@ body {
   right: 0;
   min-width: 320px;
   margin: 0;
-  padding: 56px 0 0;
+  padding: 87px 0 0;
   font-family: "Lato",sans-serif;
   font-size: 16px;
   line-height: 1.2;
@@ -27,7 +27,7 @@ body {
   transition: right .5s;
 
   @media only screen and (min-width: 62.063em) {
-      padding: 76px 0 0;
+      padding: 91px 0 0;
   }
   &.is-openMenu {
       right: 300px;
