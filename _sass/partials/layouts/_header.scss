@@ -120,7 +120,6 @@
 
   @include media-breakpoint-up(lg) {
     height: 60px;
-    padding-top: 10px;
   }
 
   &-body {
@@ -503,30 +502,30 @@ html body {
           margin: 0 10px;
         }
       }
-      .right-two-button a
-      {
-        background: #000;
-        color: #fff;
+      .right-two-button a {
+        background: $black;
+        color: $white;
         padding: 8px 12px;
         border-radius: 7px;
         text-align: center;  
-        border: 2px solid #000;
+        border: 2px solid $black;
 
         &:hover{
-          background: #fff;
-          color: #000;
-          border: 2px solid #000;
+          background: $white;
+          color: $black;
+          border: 2px solid $black;
         }
       }
-      .right-button a{
-        background: #fff;
+      .right-button a {
+        background: $white;
+        color: $black;
         padding: 8px 40px;
-        border: 2px solid #000;
+        border: 2px solid $black;
         border-radius: 6px;
 
         &:hover{
-          background: #000;
-          color: #fff;
+          background: $black;
+          color: $white;
         }
       }
 
