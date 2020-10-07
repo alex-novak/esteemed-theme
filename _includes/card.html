@@ -16,7 +16,7 @@
         <div class="item-list">
           <ul>
             {% for skill in profile.skills %}
-            <li><a href="/skills/{{ skill }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel">{{ site.data.config.valueMap[skill] }}</a></li>
+            <li><a typeof="skos:Concept" property="rdfs:label skos:prefLabel">{{ site.data.config.valueMap[skill] }}</a></li>
             {% endfor %}
           </ul>
         </div>

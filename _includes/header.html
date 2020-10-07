@@ -46,14 +46,6 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li class="dropdown-submenu">
-                <a class="dropdown-item dropdown-toggle dropdown-item-first" href="#">Trending Skills<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  {% for skill in site.data.config.skills %}
-                  <li><a class="dropdown-item" href="/skills/{{ skill.key }}" title="{{ site.data.config.valueMap[skill.key] }}">{{ site.data.config.valueMap[skill.key] }}</a></li>
-                  {% endfor %}
-                </ul>
-              </li>
               <li class="nav-item nav-item-second">
                 <a class="nav-link" href="/jobs/">Browse Jobs</a>
               </li>
