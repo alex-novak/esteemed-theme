@@ -3,13 +3,10 @@
 {% assign dir = dir[1] %}
 {%- if dir == "contractors" and subdir or dir == "skills" -%}
 {%- assign title = page.value -%}
-{%- assign image = site.url | append: "/assets/img/StartUp-Programming-Team-509559078_2125x1416.jpeg" -%}
 {%- elsif dir == "profile" -%}
 {%- assign title = page._name -%}
-{%- assign image = page.image -%}
 {%- else -%}
 {%- assign title = page.title -%}
-{%- assign image = site.url | append: "/assets/img/StartUp-Programming-Team-509559078_2125x1416.jpeg" -%}
 {%- endif -%}
 {%- assign title = title | append: ' | ' | append: site.title -%}
 <head>
@@ -25,7 +22,7 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:url" content="{{ site.url }}" />
   <meta property="og:title" content="{{ title }}" />
-  <meta property="og:image" content="{{ image }}" />
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
   <meta property="og:image:width" content="690" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:height" content="430" />
@@ -40,7 +37,7 @@
   <meta name="twitter:url" content="{{ site.url }}" />
   <meta name="twitter:title" content="{{ title }}" />
   <meta name="twitter:image:width" content="979" />
-  <meta name="twitter:image" content="{{ image }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
   <meta name="twitter:image:height" content="457" />
   <meta name="twitter:image:alt" content="{{ site.title }}" />
   <meta name="dcterms.title" content="{{ title }}" />
