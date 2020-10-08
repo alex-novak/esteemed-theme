@@ -648,7 +648,14 @@ html body {
 
       > .dropdown {
 
+        .nav-item-second {
+          border-top: none;
+        }
+
         > .dropdown-menu {
+          @include media-breakpoint-up(lg) {
+            border-left: 1px solid $grey--most;
+          }
 
           &:before {
 
@@ -684,12 +691,13 @@ html body {
 
       .dropdown-menu {
         border-radius: 0;
+        margin-top: 0;
+        padding-top: 0;
 
         @include media-breakpoint-down(md) {
           border-bottom: none;
           border-left: none;
           border-right: none;
-          padding-top: 0;
         }
 
         a,
@@ -750,7 +758,7 @@ html body {
             background: $blue--darkest;
             content: "";
             height: 100%;
-            left: -0.2rem;
+            left: -1px;
             position: absolute;
             top: 0;
             width: 0.6rem;
