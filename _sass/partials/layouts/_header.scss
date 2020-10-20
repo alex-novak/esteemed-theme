@@ -115,7 +115,6 @@
   height: 56px;
   width: 100%;
   background: $white;
-  border-bottom: 1px solid $grey;
   transition: background .3s;
 
   @include media-breakpoint-up(lg) {
