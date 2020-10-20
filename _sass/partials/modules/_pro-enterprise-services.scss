@@ -70,6 +70,9 @@
     line-height: 2em;
     padding-top: 7%;
   }
+  .block-2-content {
+    float: left;
+  }
 }
 
 /*metrics bar*/
@@ -201,6 +204,9 @@
     padding-left: 12%;
     text-align: left;
   }
+  div {
+    float: left;
+  }
 }
 
 .enterprise-block {
@@ -232,5 +238,8 @@
     p {
       margin-bottom: 2.5rem;
     }
+  }
+  div {
+    float: left;
   }
 }
