@@ -178,3 +178,6 @@ $('.mobileMenu .js-secondLvl > span').on('click', function() {
       $thisParent = $thisFirstLvl.closest('.js-secondLvl');
   $thisParent.toggleClass('is-open');
 });
+
+// Init WOW js.
+new WOW().init();
