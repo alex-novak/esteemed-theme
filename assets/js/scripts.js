@@ -181,3 +181,17 @@ $('.mobileMenu .js-secondLvl > span').on('click', function() {
 
 // Init WOW js.
 new WOW().init();
+
+ // Add class to header when scrolling.
+(function($) {
+  var adjust = function () {
+    if($(document).scrollTop() > 0) {
+      $('.siteHeader').addClass('siteHeader-sticky');
+    } else {
+      $('.siteHeader').removeClass('siteHeader-sticky');
+    }
+  }
+
+  $(document).scroll(adjust);
+  $(function() { adjust; })
+})(window.jQuery);

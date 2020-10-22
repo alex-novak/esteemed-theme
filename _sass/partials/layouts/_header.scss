@@ -115,6 +115,36 @@
   z-index: 100;
 }
 
+//style for header when scrolling.
+.siteHeader-sticky {
+  background: $white !important;
+  border-top: 1px solid $grey--lightest;
+  box-shadow: inset 0 3px 3px -3px $black;
+  .navbar-brand {
+    .white-logo {
+      display: none;
+    }
+    .black-logo {
+      display: inline-block;
+    }
+  }
+  .sign_up-button a {
+    color: $black;
+  }
+  .navbar .navbar-collapse {
+    .navbar-nav > li > a {
+      color: $black !important;
+    }
+    .navbar-nav > li > a:hover {
+      color: $blue--dark !important;
+    }
+    #navbarDropdown .caret {
+      border-right: 1px solid $black !important;
+      border-bottom: 1px solid $black !important;
+    }
+  }
+}
+
 //style for header (white)
 .siteHeader {
   position: absolute;
