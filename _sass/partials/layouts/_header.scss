@@ -25,7 +25,8 @@
   .siteHeader {
     background: transparent;
     border-bottom: 0;
-
+    border-top: none;
+    box-shadow: unset;
     &-body {
       &-left {
         > .region {
@@ -118,8 +119,8 @@
 //style for header when scrolling.
 .siteHeader-sticky {
   background: $white !important;
-  border-top: 1px solid $grey--lightest;
-  box-shadow: inset 0 3px 3px -3px $black;
+  border-top: 1px solid $grey--lightest !important;
+  box-shadow: inset 0 3px 3px -3px $black !important;
   .navbar-brand {
     .white-logo {
       display: none;
@@ -155,6 +156,8 @@
   width: 100%;
   background: $white;
   transition: background .3s;
+  border-top: 1px solid $grey--lightest;
+  box-shadow: inset 0 3px 3px -3px $black;
 
   @include media-breakpoint-up(lg) {
     height: 60px;
