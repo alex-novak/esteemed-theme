@@ -195,3 +195,15 @@ new WOW().init();
   $(document).scroll(adjust);
   $(function() { adjust; })
 })(window.jQuery);
+
+$('.hamburger-top').on('click', function() {
+  var $esteemedButtons = $('#menu-global');
+  if ($esteemedButtons.hasClass('show')) {
+    $('.siteHeader').css('top', '50px');
+    $('#main-wrapper').css('margin-top', '0');
+  }
+  else {
+    $('.siteHeader').css('top', '150px');
+    $('#main-wrapper').css('margin-top', '100px');
+  }
+});
