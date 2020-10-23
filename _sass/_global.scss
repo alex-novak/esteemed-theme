@@ -27,17 +27,21 @@ body {
   transition: right .5s;
 
   @media only screen and (min-width: 62.063em) {
-      padding: 110px 0 0;
+    padding: 110px 0 0;
   }
   &.is-openMenu {
+    right: 300px;
+    overflow: hidden;
+    @media only screen and (min-width: 30.062em) {
       right: 300px;
-      overflow: hidden;
-      @media only screen and (min-width: 30.062em) {
-          right: 300px;
-      }
+    }
+
+    #headers-wrapper {
+      left: -300px;
+    }
   }
   &.page-homepage {
-      padding-top: 0;
+    padding-top: 0;
   }
 }
 
