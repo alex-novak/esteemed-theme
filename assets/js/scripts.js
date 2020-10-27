@@ -203,7 +203,7 @@ $('.hamburger-top').on('click', function() {
     $('#main-wrapper').css('margin-top', '0');
   }
   else {
-    $('.siteHeader').css('top', '150px');
+    $('.siteHeader').css('top', '158px');
     $('#main-wrapper').css('margin-top', '100px');
   }
 });
