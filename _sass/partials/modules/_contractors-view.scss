@@ -5,7 +5,7 @@
  * Located on the pages: contractors/*
  */
 
-.contractorsView {
+ .contractorsView {
   padding-top: 60px;
   padding-bottom: 30px;
 }
@@ -60,7 +60,6 @@
 }
 
 .role-description {
-  
   @include media-breakpoint-up(xl) {
     margin-left: 150px;
     margin-right: 150px;
@@ -117,4 +116,3 @@
     }
   }
 }
-

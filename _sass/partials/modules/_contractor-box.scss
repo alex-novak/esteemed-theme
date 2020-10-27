@@ -1,26 +1,28 @@
 /**
- * @file
- * Contractor box
- *
- * Located on the pages: contractors/*
- */
+* @file
+* Contractor box
+*
+* Located on the pages: contractors/*
+*/
 
-.contractorBoxWrap {
-  height: 100%;
-  padding: 0;
-}
+.contractorBoxWrap {}
 
 .contractorBox {
   background: $white;
-  height: 100%;
-  margin: 0 15px;
+  width: 100%;
   padding: 5px;
-  position: relative;
-  
+
+  &:not(.signUp) {
+    height: 100%;
+  }
+
   &Content {
     border: 3px solid $grey--lightest;
     height: 100%;
-    padding: 25px 20px 81px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &-img {
@@ -36,7 +38,6 @@
   &-name {
     margin-bottom: 10px;
     font-family: $fontFamily-extrabold;
-    font-size: 16px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -51,11 +52,11 @@
 
   &-rate,
   &-location {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-top: 1px solid $grey--lightest;
     border-bottom: 1px solid $grey--lightest;
     font-size: 14px;
     &-label {
@@ -69,45 +70,33 @@
     }
   }
 
-  &-location {
-    border-top: 0;
+  &-rate {
+    border-top: 1px solid $grey--lightest;
   }
 
   &-skills {
     padding: 25px 0;
+    flex-grow: 1;
+
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 0;
-      margin: 0 -5px;
+      margin: -5px;
       max-height: 65px;
       overflow-y: hidden;
       li {
         list-style: none;
-        margin: 0 5px 10px;
+        margin: 5px;
       }
     }
   }
 
   &-signUp {
     color: $grey--light;
-    margin-top: 50%;
     padding: 0 40px;
-  }
-
-  .btn {
-    position: absolute;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-
-    &-signUp {
-      margin-top: 30px;
-      position: static;
-      transform: none;
-    }
+    margin-bottom: 1rem;
   }
 
   &.signUp {

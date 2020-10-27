@@ -12,91 +12,90 @@ $('.expanded > span').on('click', function(e) {
   if (e.target != this) return;
   $(this).parent().find('> .menu').toggle();
 });
+
 $('.siteFooter-body .block__title').on('click', function() {
   if ($(window).width() <= 768) {
     $(this).toggleClass('opened');
     $(this).siblings().toggle('slow');
   }
 });
+
 $('.js-showLvl').on('click', function() {
   $(this).toggleClass('is-active');
   $('.js-itemsLvl').slideToggle('slow');
 });
 
-$(function() {
-  if ($('#contractorsSlider')) {
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item', this).length;
+// carousel
+;(function ($) {
+  var $contractorsSlider = $('.carousel-multiple-items');
+  var itemsPerSlide = 2;
+  var totalItems = $('.carousel-item', $contractorsSlider).length;
+  // add variable if itemsClone = totalItems (something) then don't show carousel contro
 
-    if (totalItems <= itemsPerSlide) {
-      $('.carousel-control-next').hide();
+  var $windowWidth = $(window).width();
+  if ($windowWidth >= 1200) {
+    itemsPerSlide = 4;
+  } else if (992 <= $windowWidth) {
+    itemsPerSlide = 3;
+  } else if ($windowWidth < 567) {
+    itemsPerSlide = 1;
+  }
+console.log(totalItems);
+  if(itemsPerSlide >= totalItems) {
+    $('.carousel-control-next', $contractorsSlider).hide();
+    $('.carousel-control-prev', $contractorsSlider).hide();
+  }
+
+  $contractorsSlider.find('.carousel-item').each(function(){
+    var next = $(this).next();
+    var itemsClone = 4;
+
+    if(itemsPerSlide > totalItems) {
+      itemsClone = totalItems - 2;
     }
-  }
-});
 
-$('#contractorsSlider').on('slide.bs.carousel', function (e) {
-  var idx = $(e.relatedTarget).index();
-  var itemsPerSlide = 4;
-  var totalItems = $('.carousel-item', this).length;
-
-  if (idx >= totalItems - itemsPerSlide - 1) {
-    var it = itemsPerSlide - (totalItems - idx);
-
-    for (var i=0; i<it; i++) {
-      // append slides to end
-      if (e.direction=="left") {
-        $('.carousel-item').eq(i).appendTo('.carousel-inner');
-      }
-      else {
-        $('.carousel-item').eq(0).appendTo('.carousel-inner');
-      }
+    if (!next.length) {
+      next = $(this).siblings(':first');
     }
-  }
-});
+    next.children(':first-child').clone().appendTo($(this));
 
-$('#contractorsSlider').on('slid.bs.carousel', function (e) {
-  var idx = $(e.relatedTarget).index();
-  var itemsPerSlide = 4;
-  var totalItems = $('.carousel-item', this).length;
+    for (var i=0;i<itemsClone;i++) {
+      next=next.next();
+      if (!next.length) {
+        next=$(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+    }
+  });
 
-  if (idx === 0) {
-    $('.carousel-control-prev').hide();
-    return;
-  } else {
-    $('.carousel-control-prev').show();
-  }
-  if (idx >= totalItems - itemsPerSlide) {
-    $('.carousel-control-next').hide();
-    return;
-  } else {
-    $('.carousel-control-next').show();
-  }
-});
+  $contractorsSlider.on('slid.bs.carousel', function (e) {
+      var idx = $(e.relatedTarget).index();
 
-function normalizeSlideHeights() {
-  $('.carousel').each(function(){
-    var items = $('.carousel-item > div', this);
-    // reset the height
-    items.css('min-height', 0);
-    // set the height
-    var maxHeight = Math.max.apply(null, items.map(function() {
-      return $(this).outerHeight()})
-        .get()
-    );
-    items.css('min-height', maxHeight + 'px');
-  })
-}
-
-$(window).on('load resize orientationchange', normalizeSlideHeights);
+      if (idx === 0) {
+        $('.carousel-control-prev').hide();
+      } else {
+        $('.carousel-control-prev').show();
+      }
+      if (idx === totalItems - itemsPerSlide) {
+        $('.carousel-control-next').hide();
+      } else {
+        $('.carousel-control-next').show();
+      }
+    });
+})(jQuery)
 
 // Smooth scroll for anchor links.
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    var $e = $(e.target),
+        hasContractorSlider = $e.closest('.contractorsSlider').length;
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    if (!hasContractorSlider) {
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 

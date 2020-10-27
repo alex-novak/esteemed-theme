@@ -50,23 +50,29 @@ layout: default
   <div class="block__content">
     <div class="container">
       <div class="view-content">
-        <div id="contractorsSlider" class="contractorsSlider carousel slide" data-interval="false" data-wrap="false">
+        <div id="contractorsSlider" class="contractorsSlider carousel-multiple-items carousel slide" data-interval="false" data-wrap="false">
           <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
             {% for profile_id in site.data.contractors[page.key].profiles %}
-            {% assign profile = profiles | where: 'id', profile_id | first %}
-            {% include card.html content=profile first=forloop.first %}
+              {% assign profile = profiles | where: 'id', profile_id | first %}
+              <div class="contractorBoxWrap carousel-item{% if forloop.index == 1 %} active{% endif %}">
+                {% include card.html content=profile %}
+              </div>
             {% endfor %}
-            <div class="contractorBoxWrap carousel-item col-md-3">
-              <div class="contractorBox signUp">
-                <div class="contractorBoxContent">
-                  <h3 class="contractorBox-signUp">Sign up for FREE to view more great contractors</h3>
-                  <a href="/getting-started/" class="btn btn--blue btn-signUp">Get Started</a>
+
+            <div class="contractorBoxWrap carousel-item">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                <div class="contractorBox signUp">
+                  <div class="contractorBoxContent justify-content-center">
+                    <h3 class="contractorBox-signUp">Sign up for FREE to view more great contractors</h3>
+                    <a href="/getting-started/" class="btn btn--blue btn-signUp">Get Started</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <a href="#contractorsSlider" data-slide="prev" class="carousel-control-prev" aria-label="previous" aria-disabled="false" style="display: none;">&nbsp;</a>
-          <a href="#contractorsSlider" data-slide="next" class="carousel-control-next" aria-label="next" aria-disabled="false" style="display: block;">&nbsp;</a>
+          <a href="#contractorsSlider" data-slide="next" class="carousel-control-next" aria-label="next" aria-disabled="false">&nbsp;</a>
         </div>
       </div>
     </div>
