@@ -16,12 +16,16 @@
   }
 }
 
-.pro-block-1 {
+.service-benefits {
   height: auto;
   min-height: 300px;
   padding-top: 45px;
   text-align: center;
   width: auto;
+
+  h2 {
+    margin: 0 auto;
+  }
 
   .bene-wrapper {
     height: auto;
@@ -48,31 +52,9 @@
   }
 }
 
-.pro-block-2 {
-  display: block;
-  height: auto;
-  min-height: 575px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 25px;
-
-  @include media-breakpoint-up(md) {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  h2 {
-    text-align: left;
-  }
-
-  .description {
-    line-height: 2em;
-    padding-top: 7%;
-  }
-  .block-2-content {
-    float: left;
-  }
+.service-details .description {
+  line-height: 2em;
+  padding-top: 7%;
 }
 
 /*metrics bar*/
