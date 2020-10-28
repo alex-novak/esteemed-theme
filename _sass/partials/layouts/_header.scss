@@ -148,7 +148,7 @@
 //style for header (white)
 .siteHeader {
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 0;
   z-index: 99;
   height: 56px;
@@ -475,20 +475,21 @@ html body {
   top: 0;
   right: 0;
   z-index: 100;
-  height: 50px;
+  height: 60px;
   width: 100%;
   background: $white;
   transition: background .3s;
+  margin-bottom: 10px;
   @include media-breakpoint-up(lg) {
-    height: 50px;
+    height: 60px;
   }
   &-body {
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     @include media-breakpoint-up(lg) {
-      height: 50px;
+      height: 60px;
     }
 
     &-left {
