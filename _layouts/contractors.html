@@ -90,13 +90,19 @@ layout: default
 </div>
 
 <div class="container">
-  <div class="role-description">
+  <div class="role-description py-5">
     {% assign vowels = "architect,art_director" | split: "," %}
     {% assign is_vowel = vowels | where_exp: "item", "item == page.key" | join: "" %}
-    <h2 style="padding-top: 2em;"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
+    <h2 class="mt-0"> What makes {% if is_vowel == "" %}a{% else %}an{% endif %} {{ site.data.config.valueMap[page.key] }} a star?</h2>
+
     {% if contractor.description_image %}
-      <p class="mb-5"><img src="{{ contractor.description_image }}"></p>
+      <div class="row mb-5">
+        <div class="col-md-8">
+          <img src="{{ contractor.description_image }}">
+        </div>
+      </div>
     {% endif %}
+
     <p>{{ contractor.description | markdownify }}</p>
   </div>
 </div>
