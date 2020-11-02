@@ -1,0 +1,91 @@
+// Global block style
+.block {
+  overflow: hidden;
+
+  &:not(.block-no-padding) {
+    padding-top: $block-padding;
+    padding-bottom: $block-padding;
+  }
+
+  .image-50 {
+    min-width: 50vw;
+  }
+
+  .btn-long {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+
+.row-block-padding {
+  margin-top: -$block-padding/2;
+  margin-bottom: -$block-padding/2;
+
+  > .col,
+  > [class*="col-"] {
+    padding-top: $block-padding/2;
+    padding-bottom: $block-padding/2;
+  }
+}
+
+// Block Team Slide.
+.block--team-slides {
+  .team-slide--item {
+    &:nth-child(even) {
+      .row-even {
+        flex-direction: row-reverse;
+      }
+
+      .image-wrapper {
+        justify-content: flex-end;
+      }
+
+      @include media-breakpoint-up(xl) {
+        .col-xl-4 {
+          margin-right: 8.333333%;
+        }
+      }
+    }
+  }
+}
+
+// Item team slide.
+.team-slide--item {
+  .content-wrapper  {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    h2 {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+// Special class for Block company numbers just for Page Our team.
+.block--company-numbers {
+  order: 2;
+}
+
+// Our team members.
+.member-wrapper {
+  .image-wrapper {
+    max-width: 100%;
+    width: 246px;
+  }
+
+  .member-name {
+    font-family: $fontFamily-semibold;
+    font-size: 3rem;
+  }
+
+  .memeber-title {
+    font-size: 2rem;
+  }
+}
+
+// Joining our team.
+.block--joining-our-team {
+  background-color: #989898;
+}
