@@ -1,10 +1,10 @@
 {% assign team_by_number = site.data.our_team.team_by_number %}
-<div class="block block--company-numbers bg-dark">
+<div class="block block--company-numbers bg-dark text-center text-md-left">
   <div class="container">
     <div class="row justify-content-md-between ">
-      <div class="col-md-6 border-right border-info d-flex align-items-md-center">
-        <div>
-          <h2 class="text-white text-left">{{ team_by_number.title }}</h2>
+      <div class="col-md-6 border-right border-info justify-content-center justify-content-md-start d-flex align-items-md-center mb-5 mb-md-0">
+        <div class="text-md-left">
+          <h2 class="text-white text-md-left">{{ team_by_number.title }}</h2>
           <a href="{{ team_by_number.btn_link }}" class="btn btn-primary btn-long">{{ team_by_number.btn_text }}</a>
         </div>
       </div>

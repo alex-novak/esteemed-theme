@@ -1,25 +1,61 @@
 .block--company-numbers {
   h2 {
-    font-size: 6rem;
-    margin-bottom: 100px;
-    max-width: 575px;
+    font-size: 3rem;
+    margin-bottom: .75em;
   }
 
   .number-wrap {
     &:not(:first-child) {
-      margin-top: 120px;
+      margin-top: 40px;
     }
 
     .number {
       font-family: $fontFamily-popins;
-      font-size: 120px;
+      font-size: 80px;
       line-height: 1em;
-      font-weight: 100;
     }
 
     .number-description {
       font-family: $fontFamily-light;
-      font-size: 32px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 1.75em;
+    }
+
+    .number-wrap {
+      &:not(:first-child) {
+        margin-top: 80px;
+      }
+
+      .number {
+        font-size: 100px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    h2 {
+      font-size: 6rem;
+      max-width: 575px;
+    }
+
+    .number-wrap {
+      &:not(:first-child) {
+        margin-top: 120px;
+      }
+
+      .number {
+        font-size: 120px;
+      }
+
+      .number-description {
+        font-size: 32px;
+      }
     }
   }
 }
