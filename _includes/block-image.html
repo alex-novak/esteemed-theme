@@ -1,0 +1,20 @@
+{% assign  component_fields = site.data.our_team.joining_our_team %}
+<div class="block block-image block--joining-our-team">
+  <div class="container">
+    <div class="row justify-content-md-between ">
+      <div class="col-sm-6 col-lg-5 d-flex align-items-center justify-content-center justify-content-sm-start">
+        <div class="text-center text-sm-left">
+          <h2 class="text-white text-sm-left">{{ component_fields.title }}</h2>
+          <a href="{{ component_fields.btn_link }}" class="btn btn-primary btn-long">{{ component_fields.btn_text }}</a>
+        </div>
+      </div>
+
+      <div class="col-sm-6 d-none d-sm-flex align-items-md-start">
+        <img src="{{ component_fields.img }}"
+          alt="{% if component_fields.img_alt %}{{ component_fields.img_alt }}{% else %}{{ component_fields.title }}{% endif %}"
+          class="image image-50"
+        >
+      </div>
+    </div>
+  </div>
+</div>

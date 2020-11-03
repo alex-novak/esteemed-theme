@@ -1,0 +1,38 @@
+<div class="team-slide--item{% if forloop.index > 2 %} bg-light order-3{% endif %}">
+  <div class="container">
+    <div class="row row-even justify-content-md-between">
+      <div class="d-flex align-items-sm-center{% if slide.img %} col-sm-6 col-md-5 col-xl-4{% else %} col-12{% endif %}">
+        <div class="content-wrapper d-flex flex-column">
+          {% if slide.badge %}
+            <h5 class="text-primary font-weight-bold mb-4">
+              {{ slide.badge }}
+            </h5>
+          {% endif %}
+
+          {% if slide.title %}
+            <h2 class="text-left">
+              {{ slide.title }}
+            </h2>
+          {% endif %}
+
+          {% if slide.description %}
+            <div class="content">
+              {{ slide.description | markdownify }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if slide.img %}
+        <div class="image-wrapper d-flex col-sm-6 px-0">
+          <div class="image d-flex justify-content-end">
+            <img src="{{ slide.img }}"
+                 alt="{% if slide.img_alt %}{{ slide.img_alt }}{% else %}{{ slide.title }}{% endif %}"
+                 class="image image-50 out-team-image"
+            >
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
