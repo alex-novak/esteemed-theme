@@ -10,6 +10,9 @@
 
     .image-50 {
       min-width: 50vw;
+      // Safari fix image size
+      width: 100%;
+      height: 100%;
     }
   }
 
