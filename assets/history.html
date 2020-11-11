@@ -4,8 +4,12 @@ permalink: "/our-history/"
 class: "page-our-history"
 ---
 
-{% assign hb_data = site.data.hero_banner[page.permalink] %}
-{% include hero_banner.html %}
+{% include hero_banner.html
+  title="Connecting employers with top WordPress talent"
+  sub_title="We love what we do."
+  img="/assets/img/hero-banner/our-history.jpg"
+  img_alt="Enterprise"
+%}
 
 <div class="container mt-5 mb-5">
   <h3>The largest single source for {{ site.vertical }} talent</h3>
