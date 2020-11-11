@@ -7,107 +7,73 @@
 
 .heroBanner {
   background-color: $newblue;
-  padding-top: 145px;
-  padding-bottom: 50px;
 
-  @include media-breakpoint-up(lg) {
-    padding-top: 183px;
-    padding-bottom: 132px;
-  }
+  .hero-title {
+    color: $white;
+    text-align: left;
+    line-height: 1.25em;
+    font-size: 3rem;
+    margin-bottom: 30px;
 
-  &.dark {
-    background-color: $newblue--darkest;
-
-    @include media-breakpoint-up(md) {
-      padding-top: 90px;
-      padding-bottom: 50px;
-
-      .field-name-field-hero-title {
-        padding-bottom: 0;
-      }
-
-      .field-name-field-hero-subtitle2 {
-        margin-bottom: 40px;
-      }
-
-      .field-name-field-hero-subtitle2 {
-
-        h3 {
-          font-size: 2.3rem;
-          line-height: 2;
-        }
-      }
+    @include media-breakpoint-up(sm) {
+      font-size: 5rem;
+      margin-bottom: 40px;
     }
 
     @include media-breakpoint-up(lg) {
-      .heroBanner-body {
-        padding-left: 60px;
-      }
+      font-size: 7rem;
+      margin-bottom: 60px;
+    }
+  }
 
-      .field-name-field-hero-title {
-        h2 {
-          font-size: 6rem;
-        }
+  .hero-subtitle {
+    margin-bottom: 68px;
+
+    h3 {
+      color: $white;
+      line-height: 1.5em;
+      font-family: $fontFamily-serif;
+      font-size: 2.3rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  .image-50 {
+    max-width: initial;
+    width: auto;
+  }
+
+  &--grouped_buttons {
+    .btn {
+      border-width: 0;
+      font-size: 2rem;
+      min-width: 300px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      > div:first-child .btn {
+        margin-right: 30px;
       }
     }
   }
 
   &-body {
-    max-width: 850px;
+    padding: 145px 0 50px 0;
 
-    .field-name-field-hero-title {
-      h1 {
-        color: $white;
-        text-align: left;
-        line-height: 1.25em;
-        font-size: 3rem;
-        margin-bottom: 30px;
-
-        @include media-breakpoint-up(sm) {
-          font-size: 5rem;
-          margin-bottom: 40px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          font-size: 7rem;
-          margin-bottom: 60px;
-        }
-      }
+    @include media-breakpoint-only(md) {
+      padding-right: 30px;
     }
 
-    .field-name-field-hero-subtitle2 {
-      margin-bottom: 68px;
-      h3 {
-        color: $white;
-        line-height: 1.5em;
-        font-family: $fontFamily-serif;
-        font-size: 2.3rem;
-
-        @include media-breakpoint-up(sm) {
-          font-size: 2.8rem;
-        }
-      }
-    }
-
-    .heroBanner--grouped_buttons {
-      div { display: inline-block; }
-      .btn {
-        border-width: 0;
-        display: inline-block;
-        font-size: 2rem;
-        min-width: 300px;
-        margin-bottom: 20px;
-        height: auto;
-        padding: 15px 8px 12px;
-      }
-      text-align: center;
-
-      @include media-breakpoint-up(sm) {
-        text-align: left;
-        > div:first-child .btn {
-          margin-right: 30px;
-        }
-      }
+    @include media-breakpoint-up(lg) {
+      padding: 183px 50px 132px 0;
     }
   }
 
@@ -119,6 +85,7 @@
         right: -150px;
       }
     }
+
     img {
       max-width: 100%;
       height: auto;
@@ -128,11 +95,29 @@
     }
   }
 
-  &-image:not(.homepage) {
-    text-align: center;
+  &.dark {
+    background-color: $newblue--darkest;
 
-    img {
-      height: auto;
+    @include media-breakpoint-up(md) {
+      .heroBanner-body {
+        padding-top: 90px;
+        padding-bottom: 50px;
+      }
+
+      .hero-subtitle {
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 2.3rem;
+          line-height: 2;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .hero-title {
+        font-size: 6rem;
+      }
     }
   }
 }

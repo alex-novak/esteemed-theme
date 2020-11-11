@@ -1,0 +1,44 @@
+<div class="heroBanner dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="heroBanner-body">
+            <h1 class="hero-title">{{ hb_data.title }}</h1>
+
+          <div class="hero-subtitle">
+            <h3>{{ hb_data.sub_title }}</h3>
+          </div>
+
+          {% if hb_data.btn_text %}
+            <div class="heroBanner--grouped_buttons">
+              <a 
+                href="
+                  {% if hb_data.btn_link %}
+                    {{ hb_data.btn_linkbtn_link }}
+                  {% else %}
+                    mailto:{{ site.email }}
+                  {% endif %}
+                "
+                {% if hb_data.btn_target %}
+                  target="_blank"
+                {% endif %}
+                class="btn btn--blue"
+              >{{ hb_data.btn_text }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col-md-6 col-md-pull-6 px-0">
+          <img
+            typeof="foaf:Image"
+            src="{{ hb_data.img }}"
+            class="image-50"
+            {% if hb_data.btn_target %}
+              alt="{{ hb_data.img_alt }}"
+            {% endif %}
+          >
+      </div>
+    </div>
+  </div>
+</div>
