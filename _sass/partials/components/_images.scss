@@ -15,12 +15,12 @@
 
     &.img-align-tablet-right {
       @include media-breakpoint-only(sm) {
-        object-fit: none;
+        object-fit: cover;
         object-position: 80% 50%;
       }
 
       @include media-breakpoint-only(md) {
-        object-fit: none;
+        object-fit: cover;
         object-position: 100% 50%;
       }
     }
