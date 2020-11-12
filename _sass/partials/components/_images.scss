@@ -3,3 +3,33 @@
   // Safari fix image size
   min-height: 100%;
 }
+
+.img-wrap-width-50 {
+  min-width: 50vw;
+  height: 100%;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &.img-align-tablet-right {
+      @include media-breakpoint-only(sm) {
+        object-fit: none;
+        object-position: 80% 50%;
+      }
+
+      @include media-breakpoint-only(md) {
+        object-fit: none;
+        object-position: 100% 50%;
+      }
+    }
+
+    &.img-align-tablet-left {
+      @include media-breakpoint-between(sm, md) {
+        object-fit: cover;
+        object-position: 0% 50%;
+      }
+    }
+  }
+}
