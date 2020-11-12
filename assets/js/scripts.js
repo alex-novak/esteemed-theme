@@ -207,14 +207,21 @@ $('.hamburger-top').on('click', function() {
   }
 });
 
-$('.js-data-1').animate({ num: 200 - 20 }, {
+$(window).scroll(function() {
+  var hT = $('.statistic-item').offset().top,
+  hH = $('.statistic-item').outerHeight(),
+  wH = $(window).height(),
+  wS = $(this).scrollTop();
+  console.log((hT-wH) , wS);
+  if (wS > (hT+hH-wH)){
+  $('.js-data-1').animate({ num: 200 - 20 }, {
   duration: 2000,
   step: function (num){
   this.innerHTML = (num + 20).toFixed(0) + '+'
 }
 });
 
-$('.js-data-2').animate({ num: 6000 - 200 }, {
+  $('.js-data-2').animate({ num: 6000 - 200 }, {
   duration: 2000,
   step: function (num){
   this.innerHTML = (num + 200).toFixed(0) + '+'
@@ -222,9 +229,11 @@ $('.js-data-2').animate({ num: 6000 - 200 }, {
 });
 
 
-$('.js-data-3').animate({ num: 300 - 20 }, {
+  $('.js-data-3').animate({ num: 300 - 20 }, {
   duration: 2000,
   step: function (num){
   this.innerHTML = (num + 20).toFixed(0)
+}
+});
 }
 });
