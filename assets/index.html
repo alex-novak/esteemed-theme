@@ -8,35 +8,34 @@ class: "front page-homepage"
 <div class="clearfix">
   <div class="heroBanner">
     <div class="homepage-heroBanner-inner container">
-      <div class="row align-items-md-center">
-        <div class="heroBanner-body col-lg-8 col-md-6">
-          <div class="field-name-field-hero-title">
-            <h1>{{ site.vertical }} experts, when and how you need them.</h1>
-          </div>
-          <div class="field-name-field-hero-subtitle2">
-            <h3>{{ site.title }} matches pre-screened {{ site.vertical }} talent with the needs of your business.</h3>
-          </div>
-          <div class="heroBanner--grouped_buttons">
-            <div class="field-item">
-              <a href="/getting-started/" class="btn btn--blue">Get Started</a>
+      <div class="row">
+        <div class="col-lg-8 col-md-6 d-flex align-items-center">
+          <div class="heroBanner-body">
+            <h1 class="hero-title">{{ site.vertical }} experts, when and how you need them.</h1>
+
+            <div class="hero-subtitle">
+              <h3>{{ site.title }} matches pre-screened {{ site.vertical }} talent with the needs of your business.</h3>
             </div>
-            <div class="field-item">
+
+            <div class="heroBanner--grouped_buttons text-center d-flex flex-column align-items-start">
+              <a href="/getting-started/" class="btn btn--blue">Get Started</a>
               <a href="mailto:{{ site.email }}" class="btn btn--blue">Talk to Us</a>
             </div>
           </div>
         </div>
-        <div class="heroBanner-image col-lg-4 col-md-6">
-          <div class="field field-name-field-hero-image field-type-image field-label-hidden">
-            <div class="field-items">
-              <div class="field-item even">
-                <img typeof="foaf:Image" src="/assets/img/polaroid.png" width="438" height="487" alt="Hero Image" />
-              </div>
-            </div>
-          </div>
+
+        <div class="col-lg-4 col-md-6 px-0">
+          <img
+            typeof="foaf:Image"
+            src="/assets/img/hero-banner/home-page.jpg"
+            class="image-50"
+            alt="Hero Image"
+          />
         </div>
       </div>
     </div>
   </div>
+
   <div class="sectionGrey">
     <div class="categoryList">
       <div class="container">
