@@ -206,3 +206,25 @@ $('.hamburger-top').on('click', function() {
     $('#main-wrapper').css('margin-top', '100px');
   }
 });
+
+$('.js-data-1').animate({ num: 200 - 20 }, {
+  duration: 2000,
+  step: function (num){
+  this.innerHTML = (num + 20).toFixed(0) + '+'
+}
+});
+
+$('.js-data-2').animate({ num: 6000 - 200 }, {
+  duration: 2000,
+  step: function (num){
+  this.innerHTML = (num + 200).toFixed(0) + '+'
+}
+});
+
+
+$('.js-data-3').animate({ num: 300 - 20 }, {
+  duration: 2000,
+  step: function (num){
+  this.innerHTML = (num + 20).toFixed(0)
+}
+});
