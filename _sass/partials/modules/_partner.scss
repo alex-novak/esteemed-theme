@@ -1,0 +1,252 @@
+//Styles for Partner with us Page
+
+.page-partner {
+  .partner-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .partner-section-1 {
+    display: flex;
+    flex-flow: wrap;
+    h1 {
+      font-family: $fontFamily-medium;
+      text-align: left;
+      padding-left: 10rem;
+      padding-top: 10rem;
+      font-size: 7rem;
+      @include media-breakpoint-down(xs and md and lg) {
+        text-align: center;
+        padding-top: 4rem;
+        padding-left: 0;
+        font-size: 3rem;
+      }
+    }
+    .heroBanner-left {
+      flex: 0 0 53%;
+      background-color: $grey--background;
+      @include media-breakpoint-down(xs and sm) {
+        flex: 0 0 100%;
+      }
+    }
+    .heroBanner-right {
+      flex: 0 0 47%;
+      @include media-breakpoint-down(xs and sm) {
+        flex: 0 0 100%;
+      }
+    }
+    .button {
+      padding-left: 10rem;
+      .btn--blue {
+        font-size: 24px;
+        letter-spacing: 0.085rem;
+        padding: 20px 45px 20px;
+        @include media-breakpoint-down(xs and md and lg) {
+          font-size: 16px;
+        }
+      }
+      @include media-breakpoint-down(xs and md and lg) {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  .partner-section-2 {
+    margin-bottom: 8rem;
+    h2 {
+      font-family: $fontFamily-serif;
+      font-size: 9rem;
+      margin: 8rem 11rem 8rem 15rem;
+      text-align: left;
+      color: $grey--dark;
+      @include media-breakpoint-down(xs and md and lg) {
+        font-size: 5rem;
+        margin: 4rem 2rem;
+      }
+      span {
+        font-style: italic;
+      }
+    }
+    .statistic {
+      display: flex;
+      flex-flow: wrap;
+      @include media-breakpoint-down(xs and md and lg) {
+        justify-content: center;
+      }
+      .statistic-item {
+        flex: 0 0 33.33%;
+        text-align: center;
+        height: 200px;
+        @include media-breakpoint-down(xs and md and lg) {
+          margin-bottom: 4rem;
+        }
+        .data {
+          font-family: $fontFamily-semibold;
+          font-size: 9rem;
+          color: $blue--even-darker;
+          @include media-breakpoint-down(sm) {
+            font-size: 7rem;
+          }
+        }
+        .description {
+          font-family: $fontFamily-light;
+          font-size: 4rem;
+          max-width: 310px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .partner-section-3 {
+    .description {
+      font-family: $fontFamily-light;
+      font-size: 3rem;
+      margin-left: 20rem;
+      margin-right: 20rem;
+      @include media-breakpoint-down(xs and md and lg) {
+        font-size: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 4rem;
+      }
+      p {
+        margin-bottom: 3rem;
+      }
+
+    }
+    .partner-table {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      width: 80%;
+      font-family: $fontFamily-light;
+      font-size: 3rem;
+      margin: 10rem auto;
+      text-align: center;
+      @include media-breakpoint-down(xs and md and lg) {
+        font-size: 2rem;
+        margin: 4rem auto;
+        width: 100%;
+      }
+      .item {
+        flex: 0 0 33.3%;
+        border-top: 1px solid $blue--even-darker;
+        border-left: 1px solid $blue--even-darker;
+        margin-top: -1px;
+        margin-left: -1px;
+        padding: 10rem 5rem 10rem 5rem;
+        @include media-breakpoint-down(xs and md and lg) {
+          margin-top: -2px;
+          margin-left: -1px;
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+  .partner-section-4 {
+    display: flex;
+    flex-flow: wrap;
+    .text-left {
+      flex: 0 0 47%;
+      @include media-breakpoint-down(xs and md and lg) {
+        flex: 0 0 100%;
+      }
+      h3 {
+        font-family: $fontFamily-serif;
+        font-size: 9rem;
+        color: $grey--dark;
+        padding: 10rem 5rem 0 10rem;
+        @include media-breakpoint-down(xs and md and lg) {
+          font-size: 5rem;
+          padding: 4rem 0;
+          text-align: center;
+        }
+      }
+      .text{
+        font-family: $fontFamily-light;
+        font-size: 3rem;
+        padding: 10rem 10rem 0 10rem;
+        @include media-breakpoint-down(xs and md and lg) {
+          font-size: 3rem;
+          padding: 4rem 4rem 0 4rem;
+        }
+        p {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    .heroBanner-image {
+      flex: 0 0 53%;
+      @include media-breakpoint-down(xs and md and lg) {
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .partner-section-5 {
+    background-color: $grey--black;
+    text-align: center;
+    color: $white;
+    padding-bottom: 10rem;
+    .heading {
+      font-family: $fontFamily-serif;
+      font-size: 6rem;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      letter-spacing: -2px;
+      font-weight: 500;
+    }
+    .sub-heading {
+      font-family: $fontFamily-thin;
+      font-size: 2rem;
+      padding-bottom: 5rem;
+    }
+    .item {
+      font-size: 2rem;
+      max-width: 475px;
+      padding: 15px 0 15px 0;
+      background-color: #3e3a3b;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+  }
+  .partner-section-6 {
+    display: flex;
+    flex-flow: wrap;
+    .text-left {
+      flex: 0 0 47%;
+      @include media-breakpoint-down(xs and md and lg) {
+        flex: 0 0 100%;
+      }
+      h3 {
+        font-family: $fontFamily-serif;
+        font-size: 9rem;
+        color: $grey--dark;
+        padding: 10rem 5rem 0 10rem;
+        @include media-breakpoint-down(xs and md and lg) {
+          font-size: 5rem;
+          padding: 4rem 0;
+          text-align: center;
+        }
+      }
+      .text{
+        font-family: $fontFamily-light;
+        font-size: 3rem;
+        padding: 10rem 10rem 0 10rem;
+        @include media-breakpoint-down(xs and md and lg) {
+          font-size: 3rem;
+          padding: 4rem 4rem 0 4rem;
+        }
+        p {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+    .heroBanner-image {
+      flex: 0 0 53%;
+      @include media-breakpoint-down(xs and md and lg) {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
