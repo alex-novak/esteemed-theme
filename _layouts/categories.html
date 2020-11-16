@@ -8,7 +8,7 @@ layout: default
     <h1 class="u-text-bold main-title text-center">{{ page.title }} Posts</h1>
   </div>
   <div class="row blog-all-posts">
-    {% for post in posts %}
+    {% for post in paginator.posts %}
     {% assign author = site.data.authors[post.author] %}
     <a href="{{ post.url }}" class="blog-card col-xs-6 col-md-4">
       <div class="blog-card__wrapper">
