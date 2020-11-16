@@ -40,7 +40,7 @@ $('.js-showLvl').on('click', function() {
   } else if ($windowWidth < 567) {
     itemsPerSlide = 1;
   }
-console.log(totalItems);
+
   if(itemsPerSlide >= totalItems) {
     $('.carousel-control-next', $contractorsSlider).hide();
     $('.carousel-control-prev', $contractorsSlider).hide();
