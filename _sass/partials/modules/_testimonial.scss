@@ -33,53 +33,46 @@
     padding: 0;
     margin: 0;
   }
-  .slick__arrow {
-    display: none;
-    opacity: 0;
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50%;
     @include media-breakpoint-up(sm) {
-      display: block;
+      width: 40px;
     }
   }
-  .slick-arrow {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 0;
-    padding: 0;
-    margin: -20px 0 0;
-    text-indent: -9999px;
-    outline: 0;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-bottom: 2px solid $blue;
-      border-right: 2px solid $blue;
-      border-radius: 2px;
-    }
+
+  .carousel-control-next {
+    justify-content: flex-end;
   }
-  .slick-prev {
-    left: 15px;
-    transform: rotate(135deg);
+
+  .carousel-control-prev {
+    justify-content: flex-start;
   }
-  .slick-next {
-    right: 15px;
-    transform: rotate(-45deg);
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    height: 40px
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42.891' height='81.189' viewBox='0 0 42.891 81.189'%3E%3Cpath id='Path_3' data-name='Path 3' d='M674,683.355l-38.062,38.062L674,758.887' transform='translate(-633.938 -680.527)' fill='none' stroke='%2389bada' stroke-linecap='round' stroke-linejoin='round' stroke-width='4'/%3E%3C/svg%3E%0A");
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42.89' height='81.189' viewBox='0 0 42.89 81.189'%3E%3Cpath id='Path_3' data-name='Path 3' d='M635.938,683.355,674,721.417l-38.062,37.47' transform='translate(-633.109 -680.527)' fill='none' stroke='%2389bada' stroke-linecap='round' stroke-linejoin='round' stroke-width='4'/%3E%3C/svg%3E%0A");
   }
 }
 
 .boxTestimonial {
   display: flex;
   flex-direction: column;
+
   @include media-breakpoint-up(sm) {
     flex-direction: row;
-    padding: 0 30px;
+    padding: 0 40px;
   }
+
   &-img {
     margin-bottom: 20px;
     @include media-breakpoint-up(sm) {
@@ -97,6 +90,7 @@
       }
     }
   }
+
   &-body {
     @include media-breakpoint-up(sm) {
       padding-left: 20px;
@@ -110,6 +104,7 @@
     @include media-breakpoint-up(xl) {
       padding-left: 50px;
     }
+
     i {
       font-size: 30px;
       color: $blue--light;
@@ -123,6 +118,7 @@
         font-size: 40px;
       }
     }
+
     &-description {
       font-family: $fontFamily-thin;
       font-size: 20px;
@@ -139,6 +135,7 @@
         font-size: 40px;
       }
     }
+
     &-author {
       padding-top: 10px;
       text-align: right;
@@ -155,6 +152,7 @@
         display: block;
       }
     }
+
     &-btn {
       padding-top: 30px;
       text-align: center;
