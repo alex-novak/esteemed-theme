@@ -82,7 +82,7 @@ $bg-active-link: $grey--lightest;
       margin: 0;
 
       @include media-breakpoint-up(lg) {
-        flex: 1;
+        flex: auto;
       }
 
       > a {
@@ -95,7 +95,7 @@ $bg-active-link: $grey--lightest;
         font-size: 14px;
         text-transform: uppercase;
         border-radius: 0;
-        padding: 10px 15px;
+        padding: 10px 14px;
         transition: all .3s;
 
         &:hover,
