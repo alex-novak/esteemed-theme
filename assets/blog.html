@@ -60,6 +60,8 @@ pagination:
       </div>
     </a>
     {% endfor %}
+  </div>
+  <div class="blog-pager">
     {% if paginator.total_pages > 1 %}
     <ul class="pager">
         {% if paginator.previous_page %}
@@ -74,7 +76,8 @@ pagination:
         {% endif %}
     </ul>
     {% endif %}
-
+  </div>
+  <div>
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   </div>
 </div>
