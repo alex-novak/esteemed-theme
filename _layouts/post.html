@@ -5,49 +5,68 @@ layout: default
 {% assign author = site.data.authors[page.author] %}
 {% assign category = page.categories | first %}
 
-{% if page.image %}
-  <div class="blog-post__content--image">
-    <img src="{{ page.image }}" alt="Header Image">
-  </div>
-{% endif %}
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/blog/">Blog</a>
 
-<div class="container breadcrumb">
-  <a href="/blog/">Blog</a>
-  {% if category %}
-  <span class="breadcrumb--chevron">></span>
-  <a href="/blog/category/{{ category | trim | downcase | uri_escape }}/">{{ category }}</a>
-  {% endif %}
-</div>
-
-<div class="container blog-post">
-  <h1>{{ page.title }}</h1>
-  <div class="blog-post__author">By <span><a href="/blog/author/{{ page.author }}/">{{ author.name }}</a></span></div>
-  <div class="blog-post__date">{{ page.date | date: "%m.%-d.%Y" }}</div>
-  <div class="blog-post__content">
-    {{ page.content | markdownify }}
+    {% if category %}
+      <span class="breadcrumb--chevron pr-2 pl-2">></span>
+      <a href="/blog/category/{{ category | trim | downcase | uri_escape }}/">{{ category }}</a>
+    {% endif %}
   </div>
 
-  <div class="post-categories">
-    <span class="post-categories--title">Category: </span>
-    {% for category in page.categories %}
-    <a href="/blog/category/{{ category | downcase }}/">{{ category }}</a>
-    {% unless forloop.last %}<span class="space-between">,</span>{% endunless %}
-    {% endfor %}
-  </div>
+  <div class="row justify-content-center px-3 px-md-4 px-lg-5">
+    <div class="col-md-10 col-lg-8">
+      <div class="blog-post">
+        <h1 class="blog-post__title">{{ page.title }}</h1>
 
-  <div class="blog-post__author-block">
-    <div class="blog-post__author-block--container grid-x">
-      <div class="cell medium-4 large-3">
-        <div class="blog-post__author-block--image">
-          <a href="/blog/author/{{ page.author }}/"><img src="{% if author.profile_image %}{{ author.profile_image }}{% else %}/img/profile-pic.png{% endif %}" alt="{{ author.name }}"></a>
+        <div class="block-post__meta text-center pb-blog">
+          <div class="blog-post__author font-italic">
+            By <span class="font-weight-bold"><a href="/blog/author/{{ page.author }}/">{{ author.name }}</a></span>
+          </div>
+
+          <div class="blog-post__date">
+            {{ page.date | date: "%m.%-d.%Y" }}
+          </div>
         </div>
-      </div>
-      <div class="cell medium-8 large-9">
-        <div class="blog-post__author-block--name">
-          <a href="/blog/author/{{ page.author }}/">{{ author.name }}</a>
+
+        {% if page.image %}
+          <div class="blog-post__image pb-blog">
+            <img src="{{ page.image }}" alt="Header Image">
+          </div>
+        {% endif %}
+
+        <div class="blog-post__content">
+          {{ page.content | markdownify }}
         </div>
-        <div class="blog-post__author-block--bio">
-          {{ author.bio | markdownify }}
+
+        <div class="post-categories pt-blog">
+          <span class="post-categories--title">Category: </span>
+
+          {% for category in page.categories %}
+            <a href="/blog/category/{{ category | downcase }}/">{{ category }}</a>
+            {% unless forloop.last %}<span class="space-between">,</span>{% endunless %}
+          {% endfor %}
+        </div>
+
+        <div class="blog-post__author-block pt-blog pb-blog row">
+          <div class="col-12 hr pb-blog"></div>
+          <div class="col-md-4 col-lg-3">
+            <div class="blog-post__author-block--image">
+              <a href="/blog/author/{{ page.author }}/">
+                <img class="rounded-circle" src="{% if author.profile_image %}{{ author.profile_image }}{% else %}/img/profile-pic.png{% endif %}" alt="{{ author.name }}">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-lg-9">
+            <div class="blog-post__author-block--name">
+              <a href="/blog/author/{{ page.author }}/">{{ author.name }}</a>
+            </div>
+            <div class="blog-post__author-block--bio">
+              {{ author.bio | markdownify }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
