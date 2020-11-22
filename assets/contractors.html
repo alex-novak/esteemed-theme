@@ -8,16 +8,22 @@ permalink: /contractors/
     <div class="container">
       <h1>Browse top rated talent</h1>
       <div class="view-content">
-        <div id="contractorsSlider" class="contractorsSlider carousel slide" data-interval="false" data-wrap="false">
+        <div id="contractorsSlider" class="contractorsSlider carousel-multiple-items carousel slide" data-interval="false" data-wrap="false">
           <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
             {% for profile_id in site.data.contractors.main %}
             {% assign profile = site.data.profiles | where: 'id', profile_id | first %}
-            {% include card.html content=profile first=forloop.first %}
+            <div class="contractorBoxWrap carousel-item{% if forloop.index == 1 %} active{% endif %}">
+              {% include card.html content=profile %}
+            </div>
             {% endfor %}
-            <div class="contractorBoxWrap carousel-item col-md-3">
-              <div class="contractorBox signUp">
-                <h3 class="contractorBox-signUp">Sign up for FREE to view more great contractors</h3>
-                <a href="/getting-started/" class="btn btn--blue btn-signUp">Get Started</a>
+            <div class="contractorBoxWrap carousel-item">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+                <div class="contractorBox signUp">
+                  <div class="contractorBoxContent justify-content-center">
+                    <h3 class="contractorBox-signUp">Sign up for FREE to view more great contractors</h3>
+                    <a href="/getting-started/" class="btn btn--blue btn-signUp">Get Started</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
