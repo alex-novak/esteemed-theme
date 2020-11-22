@@ -546,7 +546,7 @@ html body {
         background: $black;
         color: $white;
         padding: 8px 12px;
-        border-radius: 7px;
+        border-radius: $border-radius;
         text-align: center;  
         border: 2px solid $black;
 
@@ -561,7 +561,7 @@ html body {
         color: $black;
         padding: 8px 40px;
         border: 2px solid $black;
-        border-radius: 6px;
+        border-radius: $border-radius;
 
         &:hover{
           background: $black;
