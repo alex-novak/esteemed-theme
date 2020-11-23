@@ -17,7 +17,7 @@
 
   a {
     background: $grey--lightest;
-    border-radius: 4px;
+    border-radius: $border-radius;
     color: $grey--darkest;
     display: inline-block;
     font-size: 13px;
