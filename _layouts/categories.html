@@ -12,8 +12,8 @@ layout: default
     {% assign author = site.data.authors[post.author] %}
     <a href="{{ post.url }}" class="blog-card col-xs-6 col-md-4">
       <div class="blog-card__wrapper">
-        {% if post.image %}
-          <div class="blog-card__wrapper--image" style="background-image: url('{{ post.image }}'); background-size: cover;">
+        {% if post.thumbnail %}
+          <div class="blog-card__wrapper--image" style="background-image: url('{{ post.thumbnail }}'); background-size: cover;">
           </div>
         {% else %}
           <div class="blog-card__wrapper--image" style="background-image: url('/img/blog-performance.jpg'); background-size: cover;">

@@ -17,8 +17,8 @@ pagination:
       {% assign author = site.data.authors[featured_post.author] %}
       <a href="{{ featured_post.url }}" class="blog-card blog-featured-card col-xs-12 col-md-4">
         <div class="blog-card__wrapper">
-          {% if featured_post.image %}
-            <div class="blog-card__wrapper--image" style="background-image: url('{{ featured_post.image }}'); background-size: cover;">
+          {% if featured_post.thumbnail %}
+            <div class="blog-card__wrapper--image" style="background-image: url('{{ featured_post.thumbnail }}'); background-size: cover;">
             </div>
           {% endif %}
           <div class="blog-card__bottom">
@@ -41,8 +41,8 @@ pagination:
     {% assign author = site.data.authors[post.author] %}
     <a href="{{ post.url }}" class="blog-card col-xs-6 col-md-4">
       <div class="blog-card__wrapper">
-        {% if post.image %}
-          <div class="blog-card__wrapper--image" style="background-image: url('{{ post.image }}'); background-size: cover;">
+        {% if post.thumbnail %}
+          <div class="blog-card__wrapper--image" style="background-image: url('{{ post.thumbnail}}'); background-size: cover;">
           </div>
         {% else %}
           <div class="blog-card__wrapper--image" style="background-image: url('/img/blog-performance.jpg'); background-size: cover;">
