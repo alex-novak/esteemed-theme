@@ -163,10 +163,13 @@ class: "front page-homepage"
   </div>
   <ul class="nav nav-tabs justify-content-center" role="tablist">
     <li role="presentation" class="nav-item">
-      <a id="employers-tab" class="nav-link active" href="#works-for-employers"  aria-selected="true" aria-controls="works-for-employers" role="tab" data-toggle="tab">For Employers</a>
+      <a id="employers-tab" class="nav-link active" href="#works-for-employers" aria-selected="true" aria-controls="works-for-employers" role="tab" data-toggle="tab">For Employers</a>
     </li>
     <li role="presentation">
       <a id="contractors-tab" class="nav-link" href="#works-for-contractors" aria-selected="false" aria-controls="works-for-contractors" role="tab" data-toggle="tab">For Contractors</a>
+    </li>
+    <li role="presentation">
+      <a id="agencies-tab" class="nav-link" href="#works-for-agencies" aria-selected="false" aria-controls="works-for-agencies" role="tab" data-toggle="tab">For Agencies</a>
     </li>
   </ul>
   <div class="tab-content container">
@@ -175,6 +178,9 @@ class: "front page-homepage"
     </div>
     <div role="tabpanel" aria-labelledby="contractors-tab" class="tab-pane" id="works-for-contractors">
       {% include howitworks-forcontractors.html %}
+    </div>
+    <div role="tabpanel" aria-labelledby="agencies-tab" class="tab-pane" id="works-for-agencies">
+      {% include howitworks-foragencies.html %}
     </div>
   </div>
 
