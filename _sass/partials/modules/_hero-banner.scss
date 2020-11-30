@@ -99,6 +99,20 @@
     }
   }
 
+  &.transparent {
+    background-color: transparent;
+
+    .hero-title {
+      color: $black;
+    }
+
+    .hero-subtitle {
+      h3 {
+        color: $black;
+      }
+    }
+  }
+
   &.dark {
     background-color: $newblue--darkest;
 
