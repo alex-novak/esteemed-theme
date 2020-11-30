@@ -68,6 +68,10 @@
   &-body {
     padding: 70px 0 50px 0;
 
+    .page-homepage & {
+      padding-top: 145px;
+    }
+
     @include media-breakpoint-only(md) {
       padding-right: 30px;
     }
