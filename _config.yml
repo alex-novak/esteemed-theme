@@ -35,8 +35,6 @@ plugins:
 jekyll_get_json:
   - data: profiles
     json: 'mock/profiles.json'
-  - data: jobs
-    json: 'mock/jobs.json'
   - data: config
     json: 'mock/config.json'
 
@@ -76,10 +74,6 @@ page_gen:
     template: "contractors"
     name: "key"
     dir: "skills"
-  - data: "jobs"
-    template: "job"
-    name: "key"
-    dir: "job"
 
 collections:
   categories:

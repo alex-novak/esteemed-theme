@@ -6,7 +6,7 @@
 {% assign dir = dir[1] %}
 <body class="html{% if page.class %} {{ page.class }}{% endif %} no-sidebars i18n-en panel-layout-onecol panel-region-middle">
   {% include header.html %}
-  <div id="main-wrapper"{% if dir == "profile" or dir == "job" %} class="container"{%- endif -%}>
+  <div id="main-wrapper"{% if dir == "profile" %} class="container"{%- endif -%}>
     <div id="main" class="main">
       <div id="content">
         <div class="region region-content">
