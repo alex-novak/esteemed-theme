@@ -26,10 +26,6 @@
   img: /assets/img/our-team/team/Casey Horgan.jpg"
   img_alt: ""
   title: Web Content Creator
-- name: John Obreja
-  img: /assets/img/our-team/team/John Obreja.jpg"
-  img_alt: ""
-  title: Front-end Developer
 - name: Rob Schaust
   img: /assets/img/our-team/team/Rob Schaust.jpg"
   img_alt: ""
@@ -42,7 +38,3 @@
   img: /assets/img/our-team/team/Bianca Perez-Rubio.jpg"
   img_alt: ""
   title: Associate Business Manager
-- name: Silviu Sedaru
-  img: /assets/img/our-team/team/Silviu Serdaru.jpg"
-  img_alt: ""
-  title: Developer 
