@@ -15,7 +15,7 @@
       padding-left: 10rem;
       padding-top: 10rem;
       font-size: 7rem;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         text-align: center;
         padding-top: 4rem;
         padding-left: 0;
@@ -41,11 +41,11 @@
         font-size: 24px;
         letter-spacing: 0.085rem;
         padding: 20px 45px 20px;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           font-size: 16px;
         }
       }
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         padding-left: 0;
         text-align: center;
         margin-bottom: 4rem;
@@ -60,7 +60,7 @@
       margin: 8rem 11rem 8rem 15rem;
       text-align: left;
       color: $grey--dark;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         font-size: 5rem;
         margin: 4rem 2rem;
       }
@@ -71,14 +71,14 @@
     .statistic {
       display: flex;
       flex-flow: wrap;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         justify-content: center;
       }
       .statistic-item {
         flex: 0 0 33.33%;
         text-align: center;
         height: 200px;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           margin-bottom: 4rem;
         }
         .data {
@@ -104,7 +104,7 @@
       font-size: 3rem;
       margin-left: 20rem;
       margin-right: 20rem;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         font-size: 3rem;
         margin-left: 2rem;
         margin-right: 2rem;
@@ -124,7 +124,7 @@
       font-size: 3rem;
       margin: 10rem auto;
       text-align: center;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         font-size: 2rem;
         margin: 4rem auto;
         width: 100%;
@@ -136,7 +136,7 @@
         margin-top: -1px;
         margin-left: -1px;
         padding: 10rem 5rem 10rem 5rem;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           margin-top: -2px;
           margin-left: -1px;
           padding: 2rem 0;
@@ -149,15 +149,15 @@
     flex-flow: wrap;
     .text-left {
       flex: 0 0 47%;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         flex: 0 0 100%;
       }
       h3 {
         font-family: $fontFamily-serif;
         font-size: 9rem;
         color: $grey--dark;
-        padding: 10rem 5rem 0 10rem;
-        @include media-breakpoint-down(xs and md and lg) {
+        padding: 10rem 0 0 10rem;
+        @include media-breakpoint-down(xs and sm and md) {
           font-size: 5rem;
           padding: 4rem 0;
           text-align: center;
@@ -167,7 +167,7 @@
         font-family: $fontFamily-light;
         font-size: 3rem;
         padding: 10rem 10rem 0 10rem;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           font-size: 3rem;
           padding: 4rem 4rem 0 4rem;
         }
@@ -178,7 +178,7 @@
     }
     .heroBanner-image {
       flex: 0 0 53%;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         flex: 0 0 100%;
       }
     }
@@ -215,7 +215,7 @@
     flex-flow: wrap;
     .text-left {
       flex: 0 0 47%;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         flex: 0 0 100%;
       }
       h3 {
@@ -223,7 +223,7 @@
         font-size: 9rem;
         color: $grey--dark;
         padding: 10rem 5rem 0 10rem;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           font-size: 5rem;
           padding: 4rem 0;
           text-align: center;
@@ -233,7 +233,7 @@
         font-family: $fontFamily-light;
         font-size: 3rem;
         padding: 10rem 10rem 0 10rem;
-        @include media-breakpoint-down(xs and md and lg) {
+        @include media-breakpoint-down(xs and sm and md) {
           font-size: 3rem;
           padding: 4rem 4rem 0 4rem;
         }
@@ -244,7 +244,7 @@
     }
     .heroBanner-image {
       flex: 0 0 53%;
-      @include media-breakpoint-down(xs and md and lg) {
+      @include media-breakpoint-down(xs and sm and md) {
         flex: 0 0 100%;
       }
     }
