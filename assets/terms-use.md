@@ -2,6 +2,7 @@
 title: "Terms of Use"
 permalink: "/terms-use/"
 layout: single
+contact_form: false
 ---
 
 ## Understanding your rights and responsibilities
