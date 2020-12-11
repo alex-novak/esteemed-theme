@@ -2,6 +2,7 @@
 title: "Privacy Policy"
 permalink: "/privacy/"
 layout: single
+contact_form: false
 ---
 
 ## Your Privacy Rights
