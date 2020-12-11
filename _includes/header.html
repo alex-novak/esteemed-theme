@@ -66,11 +66,13 @@
             </li>
           </ul>
           <div class="region region-navigation-right">
+            {% if page.url != '/getting-started/' %}
             <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--account block--">
               <div class="block__content">
                 <div class="sign_up-button"><a href="/getting-started/"><span class="mbri-edit"></span> Sign Up</a></div>
               </div>
             </div>
+            {% endif %}
             <div class="block block-block siteHeader-body-right-link siteHeader-body-right-link--btn block--">
               <div class="block__content">
                 <div><a class="btn btn--blue" href="{{ site.slack_signup_link }}">Become a Contractor</a></div>
