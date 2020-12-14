@@ -86,6 +86,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      contact_form: true
   -
     scope:
       type: "posts"
